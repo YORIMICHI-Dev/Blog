@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from "./Header";
 
 interface LayoutProps {
     title: string | undefined
@@ -16,6 +17,8 @@ function Layout({ title = 'Welcome to blog', keywords = "development, coding, pr
                 <meta name="description" content={description} />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+
+            <Header />
 
             <main className="container mx-auto my-7">{children}</main>
         </div>
