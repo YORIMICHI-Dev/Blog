@@ -11,7 +11,7 @@ function Header() {
                         <Image src={images} width={300} alt="logo" />
                 </Link>
                 <nav className="flex flex-wrap md:w-4/5 justify-end text-base md:ml-auto">
-                    <Link className="mx-5 cursor-pointer uppercase hover:text-indigo-200" href={"/"}>
+                    <Link className="mx-5 cursor-pointer uppercase hover:text-indigo-200" href={"/about"}>
                         About
                     </Link>
                     <Link className="mx-5 cursor-pointer uppercase hover:text-indigo-200" href={"/"}>
