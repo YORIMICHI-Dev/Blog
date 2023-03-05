@@ -2,10 +2,11 @@ import Layout from "@/components/Layout";
 
 function BlogPage() {
     return (
-        <div>
-            Enter
-        </div>
+        <Layout>
+            
+        </Layout>
     );
 }
 
 export default BlogPage;
+

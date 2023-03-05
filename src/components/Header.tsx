@@ -14,6 +14,9 @@ function Header() {
                     <Link className="mx-5 cursor-pointer uppercase hover:text-indigo-200" href={"/about"}>
                         About
                     </Link>
+                    <Link className="mx-5 cursor-pointer uppercase hover:text-indigo-200" href={"/blog"}>
+                        Blog
+                    </Link>
                     <Link className="mx-5 cursor-pointer uppercase hover:text-indigo-200" href={"/"}>
                         Contact
                     </Link>

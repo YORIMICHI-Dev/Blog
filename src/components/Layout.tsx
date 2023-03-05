@@ -1,14 +1,19 @@
 import Head from "next/head";
 import Header from "./Header";
+import { ReactNode } from "react";
 
 interface LayoutProps {
-    title: string | undefined
-    keywords: string | undefined
-    description: string | undefined
-    children: React.ReactNode
+    title: string
+    keywords: string
+    description: string
+    children: ReactNode
 }
 
-function Layout({ title = 'Welcome to blog', keywords = "development, coding, programing", description = "My blog is now developped", children }: LayoutProps) {
+const DEFAULT_TITLE = 'Welcome to blog'
+const DEFAULT_KEYWORDS = "development, coding, programing"
+const DEFAULT_DESCRIPTION = "My blog is now developped"
+
+function Layout({ title = DEFAULT_TITLE, keywords = DEFAULT_KEYWORDS, description = DEFAULT_DESCRIPTION, children }: LayoutProps) {
     return (
         <div>
             <Head>
