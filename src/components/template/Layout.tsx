@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../organism/Header";
+import Footer from "../organism/Footer";
 import { ReactNode } from "react";
 
 interface LayoutProps {
@@ -25,9 +26,14 @@ function Layout({ title = DEFAULT_TITLE, keywords = DEFAULT_KEYWORDS, descriptio
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Header />
+            <div className="flex flex-col h-screen justify-between">
+                <Header />
 
-            <main className="container mx-auto my-7">{children}</main>
+                <main className="container mx-auto my-7 mb-auto">{children}</main>
+
+                <Footer />                
+            </div>
+
         </div>
     );
 }
