@@ -9,10 +9,22 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      sm: '480px',
+      md: '760px',
+      lg: '1020px',
+      xl: '1440px',
+    },
+
+    colors: {
+      white: "#f4f4ec",
+      black: "#333333",
+    },
+
     extend: {
       colors: {
         // Main Color
-        mainBrawn: '#8D7B68',
+        mainBrawn: '#A4907C',
         secondBrawn: '#C8B6A6',
         thirdBrawn: '#F1DEC9',
 
@@ -27,9 +39,6 @@ module.exports = {
         // Gray Color
         grayishBlue: 'hsl(229, 8%, 60%)',
         veryDarkBlue: 'hsl(229, 31%, 21%)',
-
-        // White Color
-        white: "#f4f4ec",
       },
     },
   },
