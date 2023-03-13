@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* https://fonts.google.com/specimen/Lora */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Roboto:wght@700&display=swap');
+
+/* Tailwind 設定 */
+@layer base {
+  html {
+    font-family: "Lora";
+  }
+
+  body
+
+  a {
+    text-decoration: none;
+  }
+}
+
+

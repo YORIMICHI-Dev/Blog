@@ -9,7 +9,29 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // Main Color
+        mainBrawn: '#8D7B68',
+        secondBrawn: '#C8B6A6',
+        thirdBrawn: '#F1DEC9',
+
+        // Secondary Color
+        secondaryGreen: 'hsl(120, 50%, 70%)',
+        
+        // Soft Color
+        softBlue: 'hsl(231, 69%, 60%)',
+        softRed: 'hsl(0, 94%, 66%)',
+        softGreen: 'hsl(120, 50%, 70%)',
+
+        // Gray Color
+        grayishBlue: 'hsl(229, 8%, 60%)',
+        veryDarkBlue: 'hsl(229, 31%, 21%)',
+
+        // White Color
+        white: "#f4f4ec",
+      },
+    },
   },
   plugins: [require("daisyui")],
 
