@@ -16,13 +16,12 @@ module.exports = {
       xl: '1440px',
     },
 
-    colors: {
-      white: "#f4f4ec",
-      black: "#333333",
-    },
-
     extend: {
       colors: {
+        // White, Black
+        white: "#ffffff",
+        black: "#333333",
+
         // Main Color
         mainBrawn: '#A4907C',
         secondBrawn: '#C8B6A6',
@@ -35,10 +34,20 @@ module.exports = {
         softBlue: 'hsl(231, 69%, 60%)',
         softRed: 'hsl(0, 94%, 66%)',
         softGreen: 'hsl(120, 50%, 70%)',
+        softYellow: '',
 
         // Gray Color
         grayishBlue: 'hsl(229, 8%, 60%)',
         veryDarkBlue: 'hsl(229, 31%, 21%)',
+
+        // Tag Color
+        review: 'hsl(120, 50%, 70%)',
+        python: 'hsl(0, 94%, 66%)',
+        javascript: 'hsl(231, 69%, 60%)',
+        typescript: 'hsl(231, 69%, 60%)',
+        machinelearning: 'hsl()',
+        cpp: '',
+        other: '#F1DEC9',
       },
     },
   },
