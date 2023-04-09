@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import CategoryLabel from '@/components/molecules/CategoryLabel';
-import { PostProps } from "@/utils/post";
+import { Post } from "@/utils/post";
 
-function Post( { slug, frontmatter}: PostProps ) {
+function PostComponent( { slug, frontmatter}: Post ) {
 
     return (
         <div className='w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6'>
@@ -44,4 +44,4 @@ function Post( { slug, frontmatter}: PostProps ) {
     );
 }
 
-export default Post;
+export default PostComponent;

@@ -31,9 +31,6 @@ const CodeView = ({ language, children }: Props) => {
                                    padding: "32px",
                                    overflowX: "hidden",
                                }}
-                               lineNumberContainerStyle ={{
-                                
-                               }}
                                showLineNumbers>
                 {children}
             </SyntaxHighlighter>
