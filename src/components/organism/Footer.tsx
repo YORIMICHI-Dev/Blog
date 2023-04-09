@@ -2,7 +2,9 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 
+
 const Footer = () => {
+
     return (
         <footer className="bg-mainBrawn sticky top-[100vh]">
             {/* Footer Flex Container */}

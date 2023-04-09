@@ -27,10 +27,10 @@ const Header = () => {
                     </Link>
                     {/* Nav */}
                     <nav className="hidden items-center space-x-10 uppercase md:flex cursor-pointer">
-                        <Link className="tracking-widest hover:text-mainBrawn" href={"/about"}>
+                        <Link className="tracking-widest hover:text-mainBrawn" href={"/blog"}>
                             Blog
                         </Link>
-                        <Link className="tracking-widest hover:text-mainBrawn" href={"/blog"}>
+                        <Link className="tracking-widest hover:text-mainBrawn" href={"/about"}>
                             About
                         </Link>
                         <Link className="tracking-widest hover:text-mainBrawn" href={"/contact"}>
@@ -54,16 +54,16 @@ const Header = () => {
                 <div id="menu" className={`${hamburgerIsOpen ? "" : "hidden"} fixed inset-0 z-20 flex flex-col items-center min-h-screen space-y-4
                                             px-6 py-1 pt-24 pb-4 tracking-widestfont-semibold uppercase divide-y divide-white
                                             opacity-95 bg-mainBrawn`}>
-                    <div className="w-full py-3 text-center hover:text-softRed">
+                    <div className="w-full py-3 text-center text-white hover:text-softRed">
                         <Link href="/">Home</Link>
                     </div>
-                    <div className="w-full py-3 text-center hover:text-softRed">
+                    <div className="w-full py-3 text-center text-white hover:text-softRed">
                         <Link href="/blog">Blog</Link>
                     </div>
-                    <div className="w-full py-3 text-center hover:text-softRed">
+                    <div className="w-full py-3 text-center text-white hover:text-softRed">
                         <Link href="/about">About</Link>
                     </div>
-                    <div className="w-full py-3 text-center hover:text-softRed">
+                    <div className="w-full py-3 text-center text-white hover:text-softRed">
                         <Link href="/work">Work</Link>
                     </div>
                 </div>
