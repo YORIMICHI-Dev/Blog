@@ -4,7 +4,11 @@ interface Props {
 
 const H3 = ({children}: Props) => {
     return (
-        <h3></h3>
+        <div className="relative">
+            <h3 className="text-xl font-semibold mb-4">
+                {children}
+            </h3>
+        </div>
     );
 }
 

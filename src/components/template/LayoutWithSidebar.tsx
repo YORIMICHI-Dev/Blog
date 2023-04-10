@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Header from "../organism/Header";
-import Main from "../organism/Main";
+import MainWithSidebar from "../organism/MainWithSidebar";
 import Footer from "../organism/Footer";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 
 
 interface LayoutProps {
@@ -12,14 +12,15 @@ interface LayoutProps {
     children: ReactNode
 }
 
-const DEFAULT_TITLE = "Home"
+const DEFAULT_TITLE = process.env.NEXT_PUBLIC_BLOG_NAME
 const DEFAULT_KEYWORDS = "development, coding, programming"
 const DEFAULT_DESCRIPTION = "My blog is now developed"
 
-function Layout({ title = DEFAULT_TITLE, keywords = DEFAULT_KEYWORDS, description = DEFAULT_DESCRIPTION, children }: LayoutProps) {
-        
-    title += " | YORIMICHI"
 
+function LayoutWithSidebar ({ title = DEFAULT_TITLE, keywords = DEFAULT_KEYWORDS, description = DEFAULT_DESCRIPTION, children }: LayoutProps) {
+    
+    title += " | YORIMICHI"
+    
     return (
         <div>
             <Head>
@@ -34,7 +35,7 @@ function Layout({ title = DEFAULT_TITLE, keywords = DEFAULT_KEYWORDS, descriptio
             <div className="flex flex-col h-screen justify-between min-w-max">
                 <Header />
 
-                <Main >{children}</Main>
+                <MainWithSidebar >{children}</MainWithSidebar>
 
                 <Footer />         
             </div>
@@ -43,4 +44,5 @@ function Layout({ title = DEFAULT_TITLE, keywords = DEFAULT_KEYWORDS, descriptio
     );
 }
 
-export default Layout;
+export default LayoutWithSidebar;
+

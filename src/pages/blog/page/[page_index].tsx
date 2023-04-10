@@ -1,9 +1,9 @@
 import fs from'fs'
 import path from 'path';
+import FadeInOnVisible from '@/components/molecules/FadeInOnVisible';
 import PageNation from '@/components/molecules/PageNation';
-import Layout from "@/components/template/Layout"
+import LayoutWithSidebar from '@/components/template/LayoutWithSidebar';
 import PostComponent from '@/components/organism/PostComponent';
-import CategoryList from '@/components/molecules/CategoryList';
 import { POST_PER_PAGE } from '@/config';
 import { getPosts } from '@/lib/posts';
 import { Post } from '@/utils/post';
@@ -25,28 +25,21 @@ interface BlogPageProps {
 
 export default function BlogPage( {posts, numPages, currentPage, categories}: BlogPageProps ) {
     return (
-        <Layout title="Blog Contents">
-            <div className='flex justify-between'>
-                <div className='w-3/4 mr-10 max-w-full'>
-                <h1 className="text-5xl border-b-4 p-5 font-bold">Blog</h1>
+        <LayoutWithSidebar title="Blog Contents">
+            <h1 className="text-5xl border-b-4 p-5 font-bold">Blog</h1>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <FadeInOnVisible>
+                <div className="grid md:grid-cols-2 gap-5">
                 {posts.map((post, index) => {
                     return (
                     <PostComponent key={index} slug={post.slug} frontmatter={post.frontmatter} />
                     )
                 })}
-                </div>
-                <PageNation currentPage={currentPage} numPages={numPages} />
-                </div>
+                </div>                        
+            </FadeInOnVisible>
 
-                <div className='w-1/4'>
-                    <CategoryList categories={categories} />
-                </div>
-            </div>
-
-        </Layout>
-
+            <PageNation currentPage={currentPage} numPages={numPages} />
+        </LayoutWithSidebar>
     )
 }
 

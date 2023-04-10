@@ -1,7 +1,7 @@
 import fs from'fs'
 import matter from 'gray-matter';
 import path from 'path';
-import Layout from "@/components/template/Layout"
+import LayoutWithSidebar from '@/components/template/LayoutWithSidebar';
 import PostComponent from '@/components/organism/PostComponent';
 import { getPosts} from '@/lib/posts';
 import { Post } from '@/utils/post';
@@ -24,17 +24,17 @@ interface CategoryBlogPageProps {
 export default function CategoryBlogPage( {posts, categoryName}: CategoryBlogPageProps) {
 
   return (
-    <Layout title='Myblog'>
+    <LayoutWithSidebar title='Myblog'>
       <h1 className="text-5xl border-b-4 p-5 font-bold">Category in {categoryName}</h1>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid md:grid-cols-2 gap-5">
         {posts.map((post) => {
           return (
           <PostComponent key={post.frontmatter.title} slug={post.slug} frontmatter={post.frontmatter} />
           )
         })}
       </div>
-    </Layout>
+    </LayoutWithSidebar>
 
   )
 }
