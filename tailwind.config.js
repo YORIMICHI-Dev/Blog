@@ -37,7 +37,7 @@ module.exports = {
         softYellow: '',
 
         // Gray Color
-        grayishBlue: 'hsl(229, 8%, 60%)',
+        grayishBlue: 'rgb(107 114 128)',
         veryDarkBlue: 'hsl(229, 31%, 21%)',
 
         // Tag Color

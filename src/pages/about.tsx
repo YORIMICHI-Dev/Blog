@@ -1,41 +1,44 @@
 import Layout from "@/components/template/Layout";
-import CodeView from "@/components/molecules/CodeView";
-
+import FadeInOnVisible from "@/components/molecules/FadeInOnVisible";
+import ProfileBlock from "@/components/organism/ProfileBlock";
+import SkillBlock from "@/components/organism/SkillBlock";
+import HistoryBlock from "@/components/organism/HistoryBlock";
+import PageH1 from "@/components/atoms/PageH1";
+import PageH2 from "@/components/atoms/PageH2";
 
 function about() {
-    const code =
-`import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFile } from '@fortawesome/free-solid-svg-icons';
-
-import { MouseEventHandler } from 'react';
-
-interface Props {
-    language: string;
-    children: string;
-}
-const CodeView = ({ language, children }: Props) => {
-
-    const clickCopyCode: MouseEventHandler<SVGSVGElement> = () => {
-        navigator.clipboard.writeText(children)
-    }
-
-export default CodeView;`
 
     return (
-        <Layout title="About" keywords="aaa" description="aa">
-            <h1 className="text-5xl border-b-4 pb-5">About</h1>
-            <div className="bg-white shadow-md rounded-lg px-10 py-6 mt-6">
-                <h3 className="text-2xl mb-5">DevSpace Blog</h3>
+        <Layout title="About">
+            <PageH1>About</PageH1>
+            
+            <div className="flex flex-col space-y-16">
+                
+                {/* プロフィール */}
+                <FadeInOnVisible>
+                    <section id="profile" className="shadow-md pb-20 rounded-lg">
+                        <PageH2>Profile</PageH2>
+                        <ProfileBlock />                
+                    </section>
+                </FadeInOnVisible>
 
-                <p className="mb-3">
-                    This is blog built
-                </p>
-                <span className="font-bold">Version 1.0.0</span>
-                <CodeView language="javascript">
-                    {code}
-                </CodeView>
+                {/* スキル */}
+                <FadeInOnVisible>
+                    <section id="skill" className="shadow-md py-20  rounded-lg">
+                        <PageH2>Skill</PageH2>
+                        <SkillBlock />     
+                    </section>                    
+                </FadeInOnVisible>
+
+
+                {/* 履歴 */}
+                <FadeInOnVisible>
+                    <section id="history" className="shadow-md py-20  rounded-lg">
+                        <PageH2>History</PageH2>
+                        <HistoryBlock />
+                    </section>                    
+                </FadeInOnVisible>
+
             </div>
         </Layout>
     );

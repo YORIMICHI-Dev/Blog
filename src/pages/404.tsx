@@ -16,9 +16,9 @@ function NotFoundPage() {
                         <p className="max-w-md mx-auto text-lg text-center text-grayishBlue lg:text-2xl lg:text-left lg:mt-0 lg:mx-0">ページが見つかりませんでした...</p>
                         {/* Button */}
                         <div className="flex items-center justify-center w-full space-x-4 lg:justify-start">
-                            <Link href={"#"} className="p-4 font-semibold text-white bg-softGreen rounded shadow-md border-2 border-softGreen
+                            <Link href={"/"} className="p-4 font-semibold text-white bg-softGreen rounded shadow-md border-2 border-softGreen
                                                             md:text-base hover:bg-white hover:text-softGreen uppercase">Go back to Home</Link>
-                            <Link href={"#"} className="p-4 font-semibold text-white bg-secondBrawn rounded shadow-md border-2 border-secondBrawn
+                            <Link href={"/work"} className="p-4 font-semibold text-white bg-secondBrawn rounded shadow-md border-2 border-secondBrawn
                                                         md:text-base hover:bg-white hover:text-secondBrawn uppercase">Go to work</Link>    
                         </div>
                     </div>

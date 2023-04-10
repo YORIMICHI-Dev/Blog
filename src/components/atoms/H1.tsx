@@ -5,7 +5,7 @@ interface Props {
 const H1 = ({children}: Props) => {
     return (
         <div className="relative">
-            <h1 className="text-4xl font-semibold mb-4">
+            <h1 className="text-3xl font-semibold mb-4">
                 {children}
             </h1>
             {/* 下線の色が2:8の場合

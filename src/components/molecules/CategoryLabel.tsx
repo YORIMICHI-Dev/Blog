@@ -22,7 +22,7 @@ export default function CategoryLabel({children}: Props) {
     const backColor = getColor(children as string)
 
     return (
-        <div className={`px-2 py-1 ${backColor} text-white font-bold rounded-full`}>
+        <div className={`px-2 py-1 ${backColor} text-white font-bold rounded-full duration-300 hover:scale-110 hover:opacity-95`}>
             <Link href={`/blog/category/${(children as string).toLowerCase()}`}>{children}</Link>
         </div>
     )
