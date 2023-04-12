@@ -1,9 +1,10 @@
-import Link from 'next/link';
 import Layout from "@/components/template/Layout"
-import PostComponent from '@/components/organism/PostComponent';
+import IndexHero from '@/components/organism/index/IndexHero';
+import IndexSkill from "@/components/organism/index/IndexSkill";
+import IndexAbout from "@/components/organism/index/IndexAbout";
+import IndexWork from "@/components/organism/index/IndexWork";
 import { getPosts } from '@/lib/posts';
-
-import PageH1 from '@/components/atoms/PageH1';
+import { PARENT_CATEGORY } from "@/config";
 import { Post } from '@/utils/post';
 
 interface HomePageProps {
@@ -11,34 +12,43 @@ interface HomePageProps {
 }
 
 
-export default function HomePage( {posts}: HomePageProps ) {
+interface Props {
+	posts: {
+	codePost: Post,
+	webPost: Post,
+	toolPost: Post,
+  }}
+
+
+export default function HomePage( {posts}: Props ) {
 
   return (
     <Layout title={"Home"}>
-      <PageH1>Latest Posts</PageH1>
+		<div className='space-y-24 lg:space-y-40'>
+			<IndexHero />
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {posts.map((post) => {
-          return (
-          <PostComponent key={post.frontmatter.title} slug={post.slug} frontmatter={post.frontmatter} />
-          )
-        })}
-      </div>
+			<IndexSkill posts={posts} />
 
-      <Link href={'/blog'} className="block text-center border border-gray-500 text-gray-800 rounded-md py-4 my-5
-                                      transition duration-500 ease select-none hover:text-white hover:bg-gray-900
-                                      focus:outline-none focus:shadow-outline w-full">
-        More Posts
-      </Link>
+			<IndexAbout />
+
+			<IndexWork />
+		</div>
     </Layout>
 
   )
 }
 
+
 export const getStaticProps = async () => {
-  return {
-      props: {
-          posts: getPosts().slice(0, 6)
-      },
-  }
+	const posts = getPosts()
+
+	return {
+		props: {
+			posts: {
+				"codePost": posts.slice(0, 1).at(0),
+				"webPost": posts.slice(1, 2).at(0),
+				"toolPost": posts.slice(2, 3).at(0),
+			}
+		},
+	}
 }

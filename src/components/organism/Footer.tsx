@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="mx-auto w-full px-16 py-10">
                 <div className="grid grid-cols-2 gap-12 md:grid-cols-4">
                     <div className="flex flex-col items-center justify-center text-xl gap-4">
-                        <p>aaaaaaaaaa</p>
+                        <Link href={"/"} className="">YORIMICHI</Link>
                         <div className="flex flex-row space-x-4">
                             <Link href={process.env.NEXT_PUBLIC_GITHUB_URL}>
                                 <FontAwesomeIcon icon={faGithub} className="transition duration-300 w-6 text-md font-semibold hover:scale-110" />

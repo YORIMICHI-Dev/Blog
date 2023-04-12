@@ -1,5 +1,5 @@
 import Layout from "@/components/template/Layout";
-import WorkBlock from "@/components/organism/WorkBlock";
+import WorkBlock from "@/components/organism/work/WorkBlock";
 import FadeInOnVisible from "@/components/molecules/FadeInOnVisible";
 import PageH1 from "@/components/atoms/PageH1";
 

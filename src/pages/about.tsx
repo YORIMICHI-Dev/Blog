@@ -1,8 +1,8 @@
 import Layout from "@/components/template/Layout";
 import FadeInOnVisible from "@/components/molecules/FadeInOnVisible";
-import ProfileBlock from "@/components/organism/ProfileBlock";
-import SkillBlock from "@/components/organism/SkillBlock";
-import HistoryBlock from "@/components/organism/HistoryBlock";
+import ProfileBlock from "@/components/organism/about/ProfileBlock";
+import SkillBlock from "@/components/organism/about/SkillBlock";
+import HistoryBlock from "@/components/organism/about/HistoryBlock";
 import PageH1 from "@/components/atoms/PageH1";
 import PageH2 from "@/components/atoms/PageH2";
 
@@ -32,6 +32,7 @@ function about() {
 
 
                 {/* 履歴 */}
+
                 <FadeInOnVisible>
                     <section id="history" className="shadow-md py-20  rounded-lg">
                         <PageH2>History</PageH2>

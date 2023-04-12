@@ -32,3 +32,10 @@ export const CATEGORIES_ICON: CategoryIcon = {
     "VSCode": <DiVisualstudio />,
     "Review": <SiCodereview />
 }
+
+
+export const PARENT_CATEGORY = {
+    "Code": ["Python", "TypeScript"],
+    "WebApp": ["Python", "TypeScript"],
+    "Tools": ["Python", "TypeScript"],
+}
