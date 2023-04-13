@@ -5,7 +5,7 @@ import { faUbuntu } from '@fortawesome/free-brands-svg-icons';
 const SkillBlock = () => {
     return (
 		<div className="py-6 mx-auto">
-			<div className="grid justify-center xl:grid-cols-2 space-y-6 xl:space-y-0">
+			<div className="grid justify-center xl:grid-cols-2">
 				{Skills.map((skill, index) => {
 					return (
 						<div key={index} className="flex flex-row space-x-5 pl-20 py-5 mr-auto">
@@ -46,9 +46,9 @@ const Skills = [
 		title: "Program",
 		icon: faCode,
 		detail: [
-			"プログラミング言語は主にPythonを学んできました。",
-			"機械学習やバックエンド内の処理を書くにもPythonです。",
-			"最近はフロントエンドであるTypeScriptで遊んでいます。",
+			"プログラミング言語は主にPythonを学んできました",
+			"機械学習やバックエンド内の処理を書くにもPythonです",
+			"最近はフロントエンドであるTypeScriptで遊んでいます",
 		],
 		skill: [
 			"Python (Numpy, Pandas, matplotlib, Pytorchなど機械学習, etc...)",
@@ -61,10 +61,10 @@ const Skills = [
 		title: "Web App",
 		icon: faGlobe,
 		detail: [
-			"Webで創作物をデプロイするために触っています。",
-			"保守案件でDjangoを触ったので機械学習と組み合わせてみたい。",
-			"CSSはなんとなくTailwindで書いています。",
-			"書きやすいような書きにくいような。"
+			"Webで創作物をデプロイするために触っています",
+			"保守案件でDjangoを触ったので機械学習と組み合わせてみたい",
+			"CSSはなんとなくTailwindで書いています",
+			"書きやすいような書きにくいような"
 		],
 		skill: [
 			"Django",
@@ -76,19 +76,19 @@ const Skills = [
 		title: "Cloud Server",
 		icon: faCloud,
 		detail: [
-			"保守案件としてAWSを触っています。",
-			"ブログもAWSでデプロイしています。",
+			"保守案件としてAWSを触っています",
+			"ブログもAWSでデプロイしています",
 		],
 		skill: [
 			"AWS (EC2, ELB, Route53, RDS, S3, SES, etc...)",
 		],
 	},
 	{
-		title: "OS",
+		title: "OS / Container",
 		icon: faUbuntu,
 		detail: [
-			"OSはITに就職してからずっとUbuntuを使っています。",
-			"Mac Pro支給されましたが、結局Ubuntuで作業しています。",
+			"OSはITに就職してからずっとUbuntuを使っています",
+			"Mac Pro支給されましたが結局Ubuntuで作業しています",
 		],
 		skill: [
 			"Ubuntu (22.04 LTS)",
@@ -100,9 +100,9 @@ const Skills = [
 		title: "Tools",
 		icon: faTools,
 		detail: [
-			"ツールはどこの会社でも採用されているものを使っています。",
-			"案件問わず会社ごとに決まっていると思うため、",
-			"特に好みなどはありません。",
+			"ツールはどこの会社でも採用されているものを使っています",
+			"案件問わず会社ごとに決まっていると思うため",
+			"特に好みなどはありません",
 		],
 		skill: [
 			"Git / Github",
@@ -116,8 +116,8 @@ const Skills = [
 		title: "Certifications",
 		icon: faCertificate,
 		detail: [
-			"資格は業務で必要になることがないため気まぐれで勉強しています。",
-			"最低限の勉強は続けていきたいです。",
+			"資格は業務で必要になることがないため気まぐれで勉強しています",
+			"最低限の勉強は続けていきたいです",
 		],
 		skill: [
 			"基礎情報技術者",

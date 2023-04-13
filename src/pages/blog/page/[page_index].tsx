@@ -3,7 +3,7 @@ import path from 'path';
 import FadeInOnVisible from '@/components/molecules/FadeInOnVisible';
 import PageNation from '@/components/molecules/PageNation';
 import LayoutWithSidebar from '@/components/template/LayoutWithSidebar';
-import PostComponent from '@/components/organism/PostComponent';
+import PostComponent from '@/components/molecules/PostComponent';
 import { POST_PER_PAGE } from '@/config';
 import { getPosts } from '@/lib/posts';
 import { Post } from '@/utils/post';

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter} from "@fortawesome/free-brands-svg-icons";
 import { faUserAlt } from "@fortawesome/free-solid-svg-icons";
 
-import profileImg from "public/images/posts/img1.jpg"
+import profileImg from "public/images/card_img.png"
 
 
 const ProfileCard = () => {

@@ -8,6 +8,7 @@ import { marked } from "marked";
 
 import LayoutWithSidebar from "@/components/template/LayoutWithSidebar";
 import CategoryLabel from "@/components/molecules/CategoryLabel";
+import Breadcrumb from "@/components/molecules/Breadcrumb";
 import H1 from "@/components/atoms/H1";
 
 interface PathProps {
@@ -27,9 +28,9 @@ function PostPage(props: PostProps) {
 
     return (
         <LayoutWithSidebar title={frontmatter.title}>
-            <Link href={`/blog`}>Go Back</Link>
             <div className="w-full lg:px-10 py-3 space-y-2 bg-white rounded-lg shadow-xl">
-                <div className="flex justify-between mt-4 flex-col mx-auto items-baseline md:flex-row md:mb-0 space-y-5">
+                <Breadcrumb category={frontmatter.category}/>
+                <div className="flex justify-between flex-col mx-auto items-baseline md:flex-row md:mb-0 space-y-5">
                     <H1>{frontmatter.title}</H1>
                     <CategoryLabel>{frontmatter.category}</CategoryLabel>
                 </div>

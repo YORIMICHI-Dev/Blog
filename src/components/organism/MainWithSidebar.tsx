@@ -9,7 +9,7 @@ interface MainProps {
 const MainWithSidebar = ({children}: MainProps) => {
     return (
         <main className="container mx-auto my-7 mb-auto">
-            {/* main */}
+            {/* mainとsidebar */}
             <div className='flex justify-between lg:space-x-10'>
                 {/* main */}
                 <div className='lg:w-3/4'>

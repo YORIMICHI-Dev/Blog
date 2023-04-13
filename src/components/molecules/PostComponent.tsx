@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import CategoryLabel from '@/components/molecules/CategoryLabel';
+import CategoryLabel from "./CategoryLabel";
 import { Post } from "@/utils/post";
 
 function PostComponent( { slug, frontmatter}: Post ) {

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import img1 from "public/images/about1.jpg"
 import img2 from "public/images/about2.jpg"

@@ -2,7 +2,7 @@ import fs from'fs'
 import matter from 'gray-matter';
 import path from 'path';
 import LayoutWithSidebar from '@/components/template/LayoutWithSidebar';
-import PostComponent from '@/components/organism/PostComponent';
+import PostComponent from '@/components/molecules/PostComponent';
 import { getPosts} from '@/lib/posts';
 import { Post } from '@/utils/post';
 import { GetStaticPaths } from 'next';
