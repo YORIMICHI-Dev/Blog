@@ -1,12 +1,8 @@
-interface Props {
-    children: string;
-}
-
-const H1 = ({children}: Props) => {
+const H1 = (props: {children?: React.ReactNode}) => {
     return (
         <div className="relative">
             <h1 className="text-3xl font-semibold mb-4">
-                {children}
+                {props.children}
             </h1>
             {/* 下線の色が2:8の場合
             <div className="absolute bottom-0 left-0 w-full h-1 flex">

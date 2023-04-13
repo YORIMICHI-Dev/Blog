@@ -3,8 +3,9 @@ function getEnvVar(key: keyof NodeJS.ProcessEnv): string {
     const value = process.env[key];
     // 環境変数が存在しない場合はエラーとします
     if (typeof value === 'undefined') {
-      throw new Error(`Environment variable ${key} is not defined.`);
+		throw new Error(`Environment variable ${key} is not defined.`);
     }
+
     return value;
 }
 
