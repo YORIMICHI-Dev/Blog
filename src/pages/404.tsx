@@ -26,7 +26,6 @@ function NotFoundPage() {
                     <div className="mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
                         <Image src={notFoundImg} alt="404" className="lg:top-24 xl:top-0"/>                        
                     </div>
-
                 </div>
             </section>
         </Layout>

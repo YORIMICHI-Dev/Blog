@@ -7,17 +7,14 @@ import { getPosts } from '@/lib/posts';
 import { PARENT_CATEGORY } from "@/config";
 import { Post } from '@/utils/post';
 
-interface HomePageProps {
-	posts: Post[]
-}
-
 
 interface Props {
 	posts: {
 	codePost: Post,
 	webPost: Post,
 	toolPost: Post,
-  }}
+  }
+}
 
 
 export default function HomePage( {posts}: Props ) {

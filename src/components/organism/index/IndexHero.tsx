@@ -5,6 +5,7 @@ import heroImage from "public/images/about1.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
+
 const IndexHero = () => {
     return (
         <section id="hero">
