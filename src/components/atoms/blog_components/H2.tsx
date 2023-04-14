@@ -1,8 +1,11 @@
 const H2 = (props: {children?: React.ReactNode}) => {
     return (
-            <h2 className="text-3xl font-semibold mb-4">
-                {props.children}
-            </h2>
+        <>
+            <div className="flex items-center my-16">
+                <div className="h-12 w-1 bg-gradationBrawnToB mr-4"></div>
+                <h1 className="text-4xl font-semibold">{props.children}</h1>
+            </div>   
+        </>
     );
 }
 

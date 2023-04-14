@@ -77,8 +77,7 @@ export const getStaticProps = async({params}: PathProps) => {
 
     const numPages = Math.ceil(files.length / POST_PER_PAGE)
     const pageIndex = page - 1
-    const orderedPosts = posts
-        .slice(pageIndex * POST_PER_PAGE, (pageIndex + 1) * POST_PER_PAGE)
+    const orderedPosts = posts.slice(pageIndex * POST_PER_PAGE, (pageIndex + 1) * POST_PER_PAGE)
 
     return {
         props: {

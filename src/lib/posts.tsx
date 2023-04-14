@@ -7,13 +7,14 @@ const files = fs.readdirSync(path.join('src/posts'));
 
 export const getPosts = (): Post[] => {
     const posts = files.map((filename) => {
-        const slug = filename.replace('.md', '');
+        const slug = filename.replace('.mdx', '');
         const markdownWithMeta = fs.readFileSync(path.join('src/posts', filename), 'utf-8');
         const { data: frontmatter } = matter(markdownWithMeta);
         return {
             slug,
             frontmatter: {
                 title: frontmatter.title,
+                slug: frontmatter.slug,
                 date: frontmatter.date,
                 excerpt: frontmatter.excerpt,
                 cover_image: frontmatter.cover_image,

@@ -5,6 +5,7 @@ export interface Post {
 
 export interface Frontmatter {
     title: string
+    slug: string
     date: string
     excerpt: string
     cover_image: string

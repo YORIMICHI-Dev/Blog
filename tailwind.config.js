@@ -9,11 +9,22 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      center: true, // センタリングを有効にする
+      padding: '1rem', // コンテナのパディングを設定
+      screens: {
+        sm: '480px', // スクリーンサイズに応じたコンテナの最大幅を設定
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+      },
+    },
+
     screens: {
       sm: '480px',
-      md: '760px',
-      lg: '1020px',
-      xl: '1440px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
     },
 
     extend: {
@@ -38,16 +49,20 @@ module.exports = {
 
         // Gray Color
         grayishBlue: 'rgb(107 114 128)',
-        veryDarkBlue: 'hsl(229, 31%, 21%)',
+        veryDarkBlue: 'hsl(180, 31%, 21%)',
 
         // Tag Color
         review: 'hsl(120, 50%, 70%)',
         python: 'hsl(0, 94%, 66%)',
         javascript: 'hsl(231, 69%, 60%)',
         typescript: 'hsl(231, 69%, 60%)',
-        machinelearning: 'hsl()',
-        cpp: '',
+        machinelearning: '#C8B6A6',
+        cpp: '#C8B6A6',
         other: '#F1DEC9',
+      },
+      backgroundImage: {
+        gradationBrawn: 'radial-gradient(circle at center, #C8B6A6, #E1D4C8)',
+        gradationBrawnToB: 'linear-gradient(to bottom, #C8B6A6, #E1D4C8)',
       },
     },
   },

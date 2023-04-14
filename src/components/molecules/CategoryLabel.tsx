@@ -9,7 +9,7 @@ const getColor = (children: string): string => {
         case 'CSS': {return 'bg-css'}
         case 'Python': {return 'bg-python'}
         case 'MachineLearning': {return 'bg-machinelearning'}
-        case 'CPP': {return 'bg-cpp'}
+        case 'C++': {return 'bg-cpp'}
         default: {return ''}
     }
 }

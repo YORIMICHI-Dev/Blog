@@ -4,7 +4,7 @@ import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
     return (
-        <footer className="bg-secondBrawn mt-20">
+        <footer className="b bg-gradationBrawn mt-20">
             <div className="mx-auto w-full px-16 py-10">
                 <div className="grid grid-cols-2 gap-12 md:grid-cols-4">
                     <div className="flex flex-col items-center justify-center text-xl gap-4">

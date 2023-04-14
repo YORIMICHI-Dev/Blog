@@ -44,7 +44,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
     const categories = files.map((filename) => {
         const markdownWithMeta = fs.readFileSync(path.join("src/posts", filename), 'utf-8')
-
         const {data: frontmatter} = matter(markdownWithMeta)
 
         return frontmatter.category.toLowerCase()
