@@ -26,7 +26,7 @@ interface BlogPageProps {
 export default function BlogPage( {posts, numPages, currentPage, categories}: BlogPageProps ) {
     return (
         <LayoutWithSidebar title="Blog Contents">
-            <h1 className="text-5xl border-b-4 p-5 font-bold">Blog</h1>
+            {/* <h1 className="text-5xl border-b-4 p-5 font-bold">Blog</h1>
 
             <FadeInOnVisible>
                 <div className="grid md:grid-cols-2 gap-5">
@@ -38,7 +38,7 @@ export default function BlogPage( {posts, numPages, currentPage, categories}: Bl
                 </div>                        
             </FadeInOnVisible>
 
-            <PageNation currentPage={currentPage} numPages={numPages} />
+            <PageNation currentPage={currentPage} numPages={numPages} /> */}
         </LayoutWithSidebar>
     )
 }
@@ -69,22 +69,22 @@ export const getStaticProps = async({params}: PathProps) => {
 
     const posts = getPosts()
 
-    const categories = posts.map((post) => {
-        return post.frontmatter.category
-    })
+    // const categories = posts.map((post) => {
+    //     return post.frontmatter.category
+    // })
 
-    const uniqueCategories = [...new Set(categories)]
+    // const uniqueCategories = [...new Set(categories)]
 
-    const numPages = Math.ceil(files.length / POST_PER_PAGE)
-    const pageIndex = page - 1
-    const orderedPosts = posts.slice(pageIndex * POST_PER_PAGE, (pageIndex + 1) * POST_PER_PAGE)
+    // const numPages = Math.ceil(files.length / POST_PER_PAGE)
+    // const pageIndex = page - 1
+    // const orderedPosts = posts.slice(pageIndex * POST_PER_PAGE, (pageIndex + 1) * POST_PER_PAGE)
 
     return {
         props: {
-            posts: orderedPosts,
-            numPages,
-            currentPage: page,
-            categories: uniqueCategories
+            // posts: orderedPosts,
+            // numPages,
+            // currentPage: page,
+            // categories: uniqueCategories
         },
     }
 }

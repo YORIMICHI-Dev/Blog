@@ -24,7 +24,7 @@ export default function HomePage( {posts}: Props ) {
 		<div className='space-y-24 lg:space-y-40'>
 			<IndexHero />
 
-			<IndexSkill posts={posts} />
+			{/* <IndexSkill posts={posts} /> */}
 
 			<IndexAbout />
 
@@ -36,16 +36,16 @@ export default function HomePage( {posts}: Props ) {
 }
 
 
-export const getStaticProps = async () => {
-	const posts = getPosts()
+// export const getStaticProps = async () => {
+// 	const posts = getPosts()
 
-	return {
-		props: {
-			posts: {
-				"codePost": posts.slice(0, 1).at(0),
-				"webPost": posts.slice(1, 2).at(0),
-				"toolPost": posts.slice(2, 3).at(0),
-			}
-		},
-	}
-}
+// 	return {
+// 		props: {
+// 			posts: {
+// 				"codePost": posts.slice(0, 1).at(0),
+// 				"webPost": posts.slice(1, 2).at(0),
+// 				"toolPost": posts.slice(2, 3).at(0),
+// 			}
+// 		},
+// 	}
+// }
