@@ -1,46 +1,50 @@
 import Link from "next/link";
 import Image from "next/image";
 import CategoryLabel from "./CategoryLabel";
-import { Post } from "@/utils/post";
+import { PostMeta } from "@/utils/post";
 
-function PostComponent( { slug, frontmatter}: Post ) {
+function PostComponent( { meta }: {meta: PostMeta} ) {
 
     return (
-        <div className='group w-full px-10 py-6 bg-white rounded-lg shadow-md hover:shadow-xl mt-6 duration-300 hover:scale-105'>
-            <Link href={`/blog/${slug}`}>
-                <Image src={frontmatter.cover_image}
-                    alt="No Image"
-                    height={420}
-                    width={600}
-                    className="mb-4 rounded duration-300 group-hover:opacity-90" />            
-            </Link>
+        <div className='px-10 py-6 space-y-4 bg-white rounded-lg shadow-md mt-6'>
+            <div className="group rounded-lg object-fit overflow-hidden mb-4">
+                <Link href={`/blog/${meta.slug}`} className="relative group rounded-lg shadow-lg object-fit overflow-hidden">
+                    <Image src={meta.cover_image}
+                        alt="No Image"
+                        height={600}
+                        width={800}
+                        className="duration-300 group-hover:opacity-90 group-hover:scale-110" />            
+                </Link>                
+            </div>
+
 
 
             <div className="flex justify-between items-center">
                 <span className="font-light text-grayishBlue">
-                    {frontmatter.date}
+                    {meta.date}
                 </span>
                 <CategoryLabel>
-                    {frontmatter.category}
+                    {meta.category}
                 </CategoryLabel>
             </div>
 
-            <div className="mt-2">
-                <Link href={`/blog/${slug}`} className="text-2xl font-bold duration-300 hover:text-secondaryGreen">
-                    {frontmatter.title}
+            <div className="">
+                <Link href={`/blog/${meta.slug}`} className="text-2xl font-bold duration-300 hover:text-secondaryGreen">
+                    {meta.title}
                 </Link>
-                <p className="mt-2 text-grayishBlue">{frontmatter.excerpt}</p>
+                <p className="mt-2 text-grayishBlue">{meta.excerpt}</p>
             </div>
 
             <div className="flex justify-between items-center mt-6">
-                <Link href={`/blog/${slug}`} className='py-1 px-3 rounded-md bg-secondBrawn text-sm text-white duration-300 hover:-translate-y-1'>Read More</Link>
+                <Link href={`/blog/${meta.slug}`} className='py-1 px-3 rounded-md bg-secondBrawn text-sm text-white border-2 border-secondBrawn duration-300 
+                                                           hover:text-secondBrawn hover:bg-white font-semibold'>Read More</Link>
                 <div className="flex items-center">
-                    <Image src={frontmatter.author_image}
+                    <Image src={meta.author_image}
                            width={40}
                            height={40}
                            alt=""
                            className="mx-4 object-cover rounded-full hidden sm:block" />
-                    <h3 className="text-gray-700 font-bold">{frontmatter.author}</h3>
+                    <h3 className="text-veryDarkBlue font-bold">{meta.author}</h3>
                 </div>
             </div>
         </div>

@@ -3,10 +3,13 @@ import { Timeline } from "react-twitter-widgets";
 
 const TwitterWidgets = () => {
     return (
-        <Timeline
-            dataSource={{ sourceType: "profile", screenName: "YORIMICHI_Dev" }}
-            options={{ lang: "en", width: "400", height: "600" }}
-        />
+        <div className="rounded-lg shadow-md">
+            <Timeline
+                dataSource={{ sourceType: "profile", screenName: "YORIMICHI_Dev" }}
+                options={{ lang: "jp", }}
+            />            
+        </div>
+
     );
 }
 

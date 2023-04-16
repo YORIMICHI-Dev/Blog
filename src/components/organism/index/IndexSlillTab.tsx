@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import LinkPanel from "@/components/molecules/LinkPanel";
-import { Post } from "@/utils/post";
+import { PostMeta } from "@/utils/post";
 
 
 interface TabElementProps {
@@ -12,7 +12,7 @@ interface TabElementProps {
     panel: string;
     parentCategory: string;
     paragraph: string[];
-    post: Post
+    post: PostMeta
 }
 
 
@@ -85,8 +85,8 @@ const TabContent = ({ tabs, activeTab }: TabContentProps) => {
                         <div key={tab.label} className="flex flex-col py-5 md:flex-row md:space-x-7">
                             {/* Panel Image */}
                             <div className="flex justify-center overflow-hidden md:w-1/2 rounded-lg ">
-                            <LinkPanel href={`/blog/category/${tab.post.frontmatter.category.toLowerCase()}`}
-                                        imgSrc={tab.post.frontmatter.cover_image}
+                            <LinkPanel href={`/blog/category/${tab.post.category.toLowerCase()}`}
+                                        imgSrc={tab.post.cover_image}
                                         width={600}
                                         height={450}
                                         icon={tab.icon}
@@ -106,7 +106,7 @@ const TabContent = ({ tabs, activeTab }: TabContentProps) => {
                                     )
                                 })}
                                 </div>
-                                <Link href={`/blog/category/${tab.post.frontmatter.category.toLowerCase()}`} className="px-6 py-3 mx-auto mt-4 font-semibold text-white border-2 
+                                <Link href={`/blog/category/${tab.post.category.toLowerCase()}`} className="px-6 py-3 mx-auto mt-4 font-semibold text-white border-2 
                                                         border-white rounded-lg md:inline-flex bg-secondBrawn duration-300 hover:bg-white hover:text-secondBrawn
                                                         hover:border-secondBrawn hover:border-2">
                                     MoreInfo

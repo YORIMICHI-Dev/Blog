@@ -16,23 +16,27 @@
   a {
     text-decoration: none;
   }
+  
+  
 }
 
 /* Heroの棒グラフ */
-@media screen(lg){
+@media screen(lg) {
   .bg-hero {
-      width: 2000px;
-      height: 200px;
-      left: 30%;
-      @apply absolute rounded-l-full top-40 bg-secondBrawn;
-  }
+    width: 2000px;
+    height: 200px;
+    left: 30%;
+    @apply absolute rounded-l-full top-40;
+    background-image: linear-gradient(to right, #C8B6A6, #F0ECE6);
+}
 }
 
-@media screen(xl){
+@media screen(xl) {
   .bg-hero {
-      width: 2000px;
-      height: 200px;
-      left: 30%;
-      @apply absolute rounded-l-full top-80 bg-secondBrawn;
+    width: 2000px;
+    height: 200px;
+    left: 30%;
+    @apply absolute rounded-l-full top-80;
+    background-image: linear-gradient(to right, #C8B6A6, #F0ECE6);
   }
 }

@@ -1,11 +1,8 @@
 import fs from'fs'
-import matter from 'gray-matter';
 import path from 'path';
 import LayoutWithSidebar from '@/components/template/LayoutWithSidebar';
 import PostComponent from '@/components/molecules/PostComponent';
-import { getPosts} from '@/lib/posts';
-import { Post } from '@/utils/post';
-import { GetStaticPaths } from 'next';
+import { PostMeta, getPostsMeta } from '@/utils/post';
 
 
 interface PathProps {
@@ -16,21 +13,21 @@ interface PathProps {
 
 
 interface CategoryBlogPageProps {
-	posts: Post[]
+	postsMeta: PostMeta[]
 	categoryName: string;
 }
 
 
-export default function CategoryBlogPage( {posts, categoryName}: CategoryBlogPageProps) {
+export default function CategoryBlogPage( {postsMeta, categoryName}: CategoryBlogPageProps) {
 
   return (
     <LayoutWithSidebar title='Myblog'>
       <h1 className="text-5xl border-b-4 p-5 font-bold">Category in {categoryName}</h1>
 
       <div className="grid md:grid-cols-2 gap-5">
-        {posts.map((post) => {
+        {postsMeta.map((post, index) => {
           return (
-          <PostComponent key={post.frontmatter.title} slug={post.slug} frontmatter={post.frontmatter} />
+			<PostComponent key={index} meta={post} />  
           )
         })}
       </div>
@@ -39,19 +36,25 @@ export default function CategoryBlogPage( {posts, categoryName}: CategoryBlogPag
   )
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-    const files = fs.readdirSync(path.join("src/posts"))
 
-    const categories = files.map((filename) => {
-        const markdownWithMeta = fs.readFileSync(path.join("src/posts", filename), 'utf-8')
+export const getStaticPaths = async() => {
+    // Metaファイルを取得
+    const metaFiles = fs.readdirSync(path.join('src/meta'))
 
-        const {data: frontmatter} = matter(markdownWithMeta)
+	// Metaで使用しているカテゴリを取得
+    const categories = await Promise.all(metaFiles.map( async(filename) => {
+        const filenameRename = filename.replace(".js", "")
+        const meta: PostMeta = (await import(`src/meta/${filenameRename}`)).meta
 
-        return frontmatter.category.toLowerCase()
-    })
+        return meta.category.toLowerCase()
+    }))
 
     const paths = categories.map((category) => {
-        return {params: {categoryName: category}}
+        return {
+			params: {
+				categoryName: category
+			}
+		}
     })
 
     return {
@@ -63,16 +66,24 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps = async (paths: PathProps) => {
     const {params: {categoryName}} = paths
-	const posts = getPosts();
-  
-	const categoryPosts = posts.filter((post) => {
-	  	return post.frontmatter.category.toLowerCase() === categoryName;
+
+	// Metaを取得
+	const postsMeta = await getPostsMeta()
+
+	// 同じカテゴリーのみ取得 カテゴリー名は元の名前を取得
+	let categoryNameOrigin = "";
+	const categoryMeta: PostMeta[] = postsMeta.filter((meta) => {
+		if (categoryNameOrigin === "") {
+			categoryNameOrigin = meta.category
+		}
+	  	return meta.category.toLowerCase() === categoryName;
 	});
-  
+
+
 	return {
 		props: {
-			posts: categoryPosts,
-			categoryName: categoryName,
+			postsMeta: categoryMeta,
+			categoryName: categoryNameOrigin,
 		},
 	};
 };

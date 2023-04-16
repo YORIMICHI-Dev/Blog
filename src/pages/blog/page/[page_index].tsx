@@ -1,12 +1,12 @@
 import fs from'fs'
 import path from 'path';
+
 import FadeInOnVisible from '@/components/molecules/FadeInOnVisible';
 import PageNation from '@/components/molecules/PageNation';
 import LayoutWithSidebar from '@/components/template/LayoutWithSidebar';
 import PostComponent from '@/components/molecules/PostComponent';
 import { POST_PER_PAGE } from '@/config';
-import { getPosts } from '@/lib/posts';
-import { Post } from '@/utils/post';
+import { PostMeta, getPostsMeta, sortByDate } from '@/utils/post';
 
 
 interface PathProps {
@@ -15,24 +15,25 @@ interface PathProps {
     }
 }
 
+
 interface BlogPageProps {
-    posts: Post[],
+    postsMeta: PostMeta[],
     numPages: number,
     currentPage: number,
-    categories: string[],
 }
 
 
-export default function BlogPage( {posts, numPages, currentPage, categories}: BlogPageProps ) {
+export default function BlogPage( {postsMeta, numPages, currentPage}: BlogPageProps ) {
+
     return (
         <LayoutWithSidebar title="Blog Contents">
             <h1 className="text-5xl border-b-4 p-5 font-bold">Blog</h1>
 
             <FadeInOnVisible>
                 <div className="grid md:grid-cols-2 gap-5">
-                {posts.map((post, index) => {
+                {postsMeta.map((post, index) => {
                     return (
-                    <PostComponent key={index} slug={post.slug} frontmatter={post.frontmatter} />
+                        <PostComponent key={index} meta={post} />                            
                     )
                 })}
                 </div>                        
@@ -44,7 +45,7 @@ export default function BlogPage( {posts, numPages, currentPage, categories}: Bl
 }
 
 export const getStaticPaths = async() => {
-    const files = fs.readdirSync(path.join("src/posts"))
+    const files = fs.readdirSync(path.join("src/pages/blog/posts"))
     const numPages = Math.ceil(files.length / POST_PER_PAGE)
 
     let paths = []
@@ -65,27 +66,21 @@ export const getStaticPaths = async() => {
 export const getStaticProps = async({params}: PathProps) => {
     const page = parseInt((params && params.page_index)) || 1
 
-    const files = fs.readdirSync(path.join("src/posts"))
+    const postsMeta = await getPostsMeta() 
 
-    const posts = getPosts()
+    // 新着順にPostを取得する
+    const metaFiles = fs.readdirSync(path.join('src/meta'))
+    const dateSortPosts = postsMeta.sort(sortByDate);
 
-    const categories = posts.map((post) => {
-        return post.frontmatter.category
-    })
-
-    const uniqueCategories = [...new Set(categories)]
-
-    const numPages = Math.ceil(files.length / POST_PER_PAGE)
+    const numPages = Math.ceil(metaFiles.length / POST_PER_PAGE)
     const pageIndex = page - 1
-    const orderedPosts = posts
-        .slice(pageIndex * POST_PER_PAGE, (pageIndex + 1) * POST_PER_PAGE)
+    const orderedPosts = dateSortPosts.slice(pageIndex * POST_PER_PAGE, (pageIndex + 1) * POST_PER_PAGE)
 
     return {
         props: {
-            posts: orderedPosts,
+            postsMeta: orderedPosts,
             numPages,
             currentPage: page,
-            categories: uniqueCategories
         },
     }
 }

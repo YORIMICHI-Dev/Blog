@@ -9,6 +9,17 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      center: true, 
+      padding: '1rem',
+      screens: {
+        sm: '480px',
+        md: '760px',
+        lg: '1020px',
+        xl: '1440px',
+      },
+    },
+
     screens: {
       sm: '480px',
       md: '760px',
@@ -34,20 +45,26 @@ module.exports = {
         softBlue: 'hsl(231, 69%, 60%)',
         softRed: 'hsl(0, 94%, 66%)',
         softGreen: 'hsl(120, 50%, 70%)',
-        softYellow: '',
+        softYellow: 'rgb(238, 232, 170)',
 
         // Gray Color
-        grayishBlue: 'rgb(107 114 128)',
-        veryDarkBlue: 'hsl(229, 31%, 21%)',
+        grayishBlue: 'rgb(75, 85, 99)',
+        veryDarkBlue: 'hsl(180, 31%, 21%)',
 
         // Tag Color
-        review: 'hsl(120, 50%, 70%)',
-        python: 'hsl(0, 94%, 66%)',
-        javascript: 'hsl(231, 69%, 60%)',
-        typescript: 'hsl(231, 69%, 60%)',
-        machinelearning: 'hsl()',
-        cpp: '',
-        other: '#F1DEC9',
+        python: "hsl(50, 100%, 35%)",
+        typeScript: "hsl(206, 65%, 45%)",
+        react: "hsl(195, 100%, 60%)",
+        cpp: "hsl(216, 100%, 30%)",
+        machineLearning: "hsl(30, 100%, 60%)",
+        ubuntu: "hsl(356, 100%, 50%)",
+        aws: "hsl(340, 100%, 55%)",
+        vscode: "hsl(200, 100%, 40%)",
+        review: "hsl(146, 70%, 45%)",
+      },
+      backgroundImage: {
+        gradationBrawn: 'radial-gradient(circle at center, #C8B6A6, #E1D4C8)',
+        gradationBrawnToB: 'linear-gradient(to bottom, #C8B6A6, #E1D4C8)',
       },
     },
   },

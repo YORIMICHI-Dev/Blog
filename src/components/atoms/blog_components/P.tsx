@@ -1,8 +1,8 @@
 const P = (props: {children?: React.ReactNode}) => {
     return (
-        <h3 className="text-xl font-semibold mb-4">
+        <p className="text-xl my-4 leading-10 text-grayishBlue">
             {props.children}
-        </h3>
+        </p>
     );
 }
 
