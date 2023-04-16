@@ -1,4 +1,4 @@
-import { FaPython, FaReact, FaUbuntu,} from "react-icons/fa";
+import { FaPython, FaReact, FaUbuntu, FaCloud} from "react-icons/fa";
 import { SiCodereview, SiTypescript } from "react-icons/si";
 import { DiVisualstudio } from "react-icons/di";
 import { TbBrandCpp } from "react-icons/tb";
@@ -21,11 +21,31 @@ export const CATEGORIES: string[] = [
     "Python",
     "TypeScript",
     "React/Nextjs",
+    "C++",
     "MachineLearning",
     "Ubuntu",
+    "AWS",
     "VSCode",
     "Review",
 ]
+
+
+interface CategoryColor {
+    [key: string]: string
+}
+
+
+export const CATEGORIES_COLOR: CategoryColor = {
+    "Python": "bg-python",
+    "TypeScript": "bg-typescript",
+    "React/Nextjs": "bg-react",
+    "C++": "bg-cpp",
+    "MachineLearning": "bg-machinelearning",
+    "Ubuntu": "bg-ubuntu",
+    "AWS": "bg-aws",
+    "VSCode": "bg-vscode",
+    "Review": "bg-review",
+}
 
 
 interface CategoryIcon {
@@ -41,6 +61,7 @@ export const CATEGORIES_ICON: CategoryIcon = {
     "MachineLearning": <AiTwotoneTool />,
     "Ubuntu": <FaUbuntu />,
     "VSCode": <DiVisualstudio />,
+    "AWS": <FaCloud />,
     "Review": <SiCodereview />
 }
 

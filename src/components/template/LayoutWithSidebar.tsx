@@ -32,7 +32,7 @@ function LayoutWithSidebar ({ title = DEFAULT_TITLE, keywords = DEFAULT_KEYWORDS
                 <link rel="icon" href="public/images/favicon.ico" />
             </Head>
 
-            <div className="flex flex-col h-screen justify-between min-w-max">
+            <div className="flex flex-col h-screen justify-between min-w-full">
                 <Header />
 
                 <MainWithSidebar >{children}</MainWithSidebar>

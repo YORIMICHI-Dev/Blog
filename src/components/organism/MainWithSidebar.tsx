@@ -12,7 +12,7 @@ const MainWithSidebar = ({children}: MainProps) => {
             {/* mainとsidebar */}
             <div className='flex justify-between lg:space-x-10'>
                 {/* main */}
-                <div className='lg:w-3/4'>
+                <div className='lg:w-3/4 w-full'>
                     {children}
                 </div>
                 {/* sidebar */}

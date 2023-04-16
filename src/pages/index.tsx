@@ -3,16 +3,16 @@ import IndexHero from '@/components/organism/index/IndexHero';
 import IndexSkill from "@/components/organism/index/IndexSkill";
 import IndexAbout from "@/components/organism/index/IndexAbout";
 import IndexWork from "@/components/organism/index/IndexWork";
-import { getPosts } from '@/lib/posts';
+
 import { PARENT_CATEGORY } from "@/config";
-import { Post } from '@/utils/post';
+import { PostMeta, getPostsMeta } from "@/utils/post";
 
 
 interface Props {
 	posts: {
-	codePost: Post,
-	webPost: Post,
-	toolPost: Post,
+	codePost: PostMeta,
+	webPost: PostMeta,
+	toolPost: PostMeta,
   }
 }
 
@@ -37,7 +37,7 @@ export default function HomePage( {posts}: Props ) {
 
 
 // export const getStaticProps = async () => {
-// 	const posts = getPosts()
+// 	const posts = await getPostsMeta()
 
 // 	return {
 // 		props: {

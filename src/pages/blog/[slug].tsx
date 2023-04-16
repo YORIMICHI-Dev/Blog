@@ -69,7 +69,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }: PathProps) => {
     const { slug } = params!;
     // Metaタグの読み込み
-    const meta = (await import(`./meta/${slug}`)).meta
+    const meta = (await import(`src/meta/${slug}`)).meta
 
     return {
       props: {

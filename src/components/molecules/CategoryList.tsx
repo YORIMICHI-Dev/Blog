@@ -16,7 +16,7 @@ const CategoryList = () => {
                 {CATEGORIES.map((category, index) => {
                     return (
                         <Link key={index} href={`/blog/category/${category.toLowerCase()}`}>
-                            <div className="flex items-center text-lg py-4 pl-10 space-x-3 cursor-pointer duration-300 hover:translate-x-3 hover:text-secondaryGreen">
+                            <div className="flex items-center text-lg py-4 pl-10 space-x-3 cursor-pointer duration-300 hover:translate-x-3">
                                 {CATEGORIES_ICON[category]}
                                 <div>{category}</div>
                             </div>

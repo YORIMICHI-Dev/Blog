@@ -18,6 +18,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "types.d.ts", "**/*.ts", "**/*.tsx", "src/components/atoms/blog_components/CodeView.tsx", "src/pages/blog/posts/spdlog.jsx"],
+  "include": ["next-env.d.ts", "types.d.ts", "**/*.ts", "**/*.tsx", "src/components/atoms/blog_components/CodeView.tsx", "src/pages/blog/posts/spdlog.jsx", "src/meta/spdlog.js"],
   "exclude": ["node_modules"]
 }

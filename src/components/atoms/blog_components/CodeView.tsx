@@ -19,21 +19,19 @@ const CodeView = ( props: { language: string, filename?: string, children?: Reac
     }
 
     return (
-        <div className='relative my-4 flex justify-end items-start p-2'>
+        <div className='relative my-4 p-2'>
             <SyntaxHighlighter language={props.language}
                                style={dracula}
                                customStyle={{
                                    borderRadius: "12px",
                                    width: "100%",
                                    fontSize: "18px",
-                                   position: "relative",
                                    padding: "2em",
-                                   overflowX: "hidden",
                                }}
                                showLineNumbers>
                 {props.children as string}
             </SyntaxHighlighter>
-                <div className='absolute flex flex-row items-center space-x-3 right-6 top-6'>
+            <div className='absolute flex flex-row items-center space-x-3 right-6 top-6'>
                 {props.filename && (
                     <div className="hidden md:block text-sm  text-white text-right">
                     {props.filename}

@@ -11,6 +11,7 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+    domains: ["opengraph.githubassets.com", "example.com", "another-domain.com"],
   },
 }
 

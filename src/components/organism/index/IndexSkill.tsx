@@ -1,12 +1,12 @@
 import { IconDefinition, faCode, faGlobe, faTools } from "@fortawesome/free-solid-svg-icons";
 import IndexSkillTab from "./IndexSlillTab";
-import { Post } from "@/utils/post";
+import { PostMeta } from "@/utils/post";
 
 interface Props {
     posts: {
-    codePost: Post,
-    webPost: Post,
-    toolPost: Post,
+    codePost: PostMeta,
+    webPost: PostMeta,
+    toolPost: PostMeta,
   }}
 
 
@@ -16,16 +16,7 @@ interface Tab {
     panel: string;
     parentCategory: string;
     paragraph: string[];
-    post: Post
-}
-
-
-interface Props {
-	posts: {
-	codePost: Post,
-	webPost: Post,
-	toolPost: Post,
-  }
+    post: PostMeta
 }
 
 
