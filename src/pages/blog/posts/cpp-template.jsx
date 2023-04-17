@@ -167,7 +167,7 @@ int main(void){
     // templateクラスに別名をつけます
     using Sample = Sample<Child1>;
     Sample sample;
-    std::cout << sample.person.name << std::endl;   //  Child1
+    std::cout << sample.person.name << std::endl;  //  Child1
 }`}</CodeView>
 
 
