@@ -24,7 +24,7 @@ export default function HomePage( {posts}: Props ) {
 		<div className='space-y-24 lg:space-y-40'>
 			<IndexHero />
 
-			{/* <IndexSkill posts={posts} /> */}
+			<IndexSkill posts={posts} />
 
 			<IndexAbout />
 
@@ -36,16 +36,19 @@ export default function HomePage( {posts}: Props ) {
 }
 
 
-// export const getStaticProps = async () => {
-// 	const posts = await getPostsMeta()
+export const getStaticProps = async () => {
+	const posts = await getPostsMeta()
+	const codePost = posts.filter((value) => value.parent_category === "Code")
+	const webPost = posts.filter((value) => value.parent_category === "Web")
+	const toolPost = posts.filter((value) => value.parent_category === "Tool")
 
-// 	return {
-// 		props: {
-// 			posts: {
-// 				"codePost": posts.slice(0, 1).at(0),
-// 				"webPost": posts.slice(1, 2).at(0),
-// 				"toolPost": posts.slice(2, 3).at(0),
-// 			}
-// 		},
-// 	}
-// }
+	return {
+		props: {
+			posts: {
+				"codePost": codePost.slice(0,1).at(0),
+				"webPost": codePost.slice(0,1).at(0),
+				"toolPost": codePost.slice(0,1).at(0),
+			}
+		},
+	}
+}
