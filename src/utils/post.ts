@@ -18,7 +18,7 @@ export interface PostMeta {
 
 // Postを新着順に並べる
 export const sortByDate = ( postA: PostMeta, postB: PostMeta): number => {
-    return new Date(postA.date).valueOf() - new Date(postB.date).valueOf()
+    return new Date(postB.date).valueOf() - new Date(postA.date).valueOf() 
 }
 
 
