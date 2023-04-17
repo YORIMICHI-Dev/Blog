@@ -39,12 +39,12 @@ module.exports = {
         thirdBrawn: '#F1DEC9',
 
         // Secondary Color
-        secondaryGreen: 'hsl(120, 50%, 70%)',
+        secondaryGreen: 'hsl(120, 60%, 70%)',
         
         // Soft Color
         softBlue: 'hsl(231, 69%, 60%)',
         softRed: 'hsl(0, 94%, 66%)',
-        softGreen: 'hsl(120, 50%, 70%)',
+        softGreen: 'hsl(120, 60%, 70%)',
         softYellow: 'rgb(238, 232, 170)',
 
         // Gray Color
@@ -63,22 +63,11 @@ module.exports = {
         review: "hsl(146, 70%, 45%)",
       },
       backgroundImage: {
+        gradationBlue: 'radial-gradient(circle at center, hsl(231, 69%, 60%), hsl(231, 69%, 70%))',
+        gradationGreen: 'radial-gradient(circle at center, hsl(120, 50%, 60%), hsl(120, 50%, 70%))',
         gradationBrawn: 'radial-gradient(circle at center, #C8B6A6, #E1D4C8)',
         gradationBrawnToB: 'linear-gradient(to bottom, #C8B6A6, #E1D4C8)',
       },
     },
-  },
-  plugins: [require("daisyui")],
-
-  // daisyui config
-  daisyui: {
-    styled: true,
-    themes: true,
-    base: true,
-    utils: true,
-    logs: true,
-    rtl: false,
-    prefix: "",
-    darkTheme: "dark",
   },
 }

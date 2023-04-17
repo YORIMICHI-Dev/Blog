@@ -26,7 +26,7 @@ const RefarenceBlock = ({ href }: Props) => {
     useEffect(() => {
         (async () => {
         try {
-            const response = await fetch(`/api/metadata?url=${encodeURIComponent(href)}`);
+            const response = await fetch(`/api/metaData?url=${encodeURIComponent(href)}`);
             if (!response.ok) {
             const errorText = await response.text();
             setError(`Error fetching metadata (status: ${response.status}): ${errorText}`);
@@ -55,7 +55,6 @@ const RefarenceBlock = ({ href }: Props) => {
                         <div className="flex flex-col space-y-4">
                             <span className="text-md md:text-xl font-semibold">Title: {metadata.title}</span>
                             <div className="hidden md:block">
-                                <span className="text-md">Description</span>
                                 <span className="text-md">{metadata.description}</span>                                
                             </div>
                         </div>

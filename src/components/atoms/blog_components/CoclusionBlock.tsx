@@ -19,7 +19,7 @@ const ConclusionBlock = ({conclusionList}: Props) => {
             <div className="flex items-center justify-center my-14">
                 <div className="rounded-lg p-6">
                     <div className="shadow-lg">
-                        <div className="flex bg-softGreen items-center justify-between rounded-t-lg p-2 space-x-5">
+                        <div className="flex bg-gradationGreen items-center justify-between rounded-t-lg p-2 space-x-5">
                             <div className="bg-softBlue w-4 h-4 rounded-full"></div>
                             <div className="flex flex-row items-center space-x-4 text-white font-semibold">
                                 <FontAwesomeIcon icon={faPenToSquare} className="w-6 h-6"/>
@@ -32,10 +32,12 @@ const ConclusionBlock = ({conclusionList}: Props) => {
                             {conclusionList.map((conclusionElement, index) => {
 
                                 return (
-                                    <div key={index} className="flex flex-row font-semibold text-xl items-center space-x-3 space-y-2">
-                                        {conclusionElement.check ? <FontAwesomeIcon icon={faCheck} className="md:w-6 md:h-6 w-12 h-12 text-softGreen" />
-                                                        : <FontAwesomeIcon icon={faXmark} className="md:w-6 md:h-6 w-12 h-12 text-softRed" />}
-                                        <span className="">{conclusionElement.caseString}</span>
+                                    <div key={index} className="flex items-center text-xl font-semibold space-x-3 py-2 xl:space-y-4">
+                                        <div>
+                                            {conclusionElement.check ? <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-softGreen" />
+                                                            : <FontAwesomeIcon icon={faXmark} className="w-6 h-6 text-softRed" />}                                            
+                                        </div>
+                                        <div className="">{conclusionElement.caseString}</div>
                                     </div>
                                 )
                             })}

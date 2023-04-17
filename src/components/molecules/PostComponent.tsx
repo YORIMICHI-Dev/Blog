@@ -29,9 +29,7 @@ function PostComponent( { meta }: {meta: PostMeta} ) {
             </div>
 
             <div className="">
-                <Link href={`/blog/${meta.slug}`} className="text-2xl font-bold duration-300 hover:text-secondaryGreen">
-                    {meta.title}
-                </Link>
+                <p className="text-2xl font-bold ">{meta.title}</p>
                 <p className="mt-2 text-grayishBlue">{meta.excerpt}</p>
             </div>
 
