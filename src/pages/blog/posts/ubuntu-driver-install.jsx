@@ -44,7 +44,8 @@ reboot `}</CodeView>
     {caseString:"キーボードとマウスが動かなくなったら、xserver-xorg-input-allパッケージを再インストールする", check:true,},
     {caseString:"GUIではデバイスが反応しないため、CUI画面からインストールする", check:true,},
 ]} />
-
+<H3>{"参考"}</H3>
+<RefarenceBlock href={"https://askubuntu.com/questions/1033767/keyboard-not-working-after-update-to-18-04"}/>
 
 {/* Finish */}
 </>

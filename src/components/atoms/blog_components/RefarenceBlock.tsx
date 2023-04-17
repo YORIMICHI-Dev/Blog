@@ -49,7 +49,7 @@ const RefarenceBlock = ({ href }: Props) => {
                     <div className="relative flex flex-row p-6 space-x-4 items-center rounded-lg shadow-lg border-x-2 border-secondBrawn">
                         <div>
                             {metadata.thumbnail && (
-                                <Image src={metadata.thumbnail} width={400} height={400} alt="Thumbnail" />
+                                <Image src={metadata.thumbnail} width={300} height={200} alt="Thumbnail" />
                             )}                    
                         </div>
                         <div className="flex flex-col space-y-4">
