@@ -11,7 +11,7 @@ export const POST_PER_PAGE: number = 6
 
 export const PARENT_CATEGORY = {
     "Code": ["Python", "TypeScript", "MachineLearning"],
-    "WebApp": ["React/Nextjs", "Django", "AWS"],
+    "WebApp": ["React/Next.js", "Django", "AWS"],
     "Tools": ["Ubuntu", "VSCode"],
     "Column": ["Review",]
 }
@@ -20,7 +20,7 @@ export const PARENT_CATEGORY = {
 export const CATEGORIES: string[] = [
     "Python",
     "TypeScript",
-    "React/Nextjs",
+    "React/Next.js",
     "C++",
     "MachineLearning",
     "Ubuntu",
@@ -38,7 +38,7 @@ interface CategoryColor {
 export const CATEGORIES_COLOR: CategoryColor = {
     "Python": "bg-python",
     "TypeScript": "bg-typescript",
-    "React/Nextjs": "bg-react",
+    "React/Next.js": "bg-react",
     "C++": "bg-cpp",
     "MachineLearning": "bg-machinelearning",
     "Ubuntu": "bg-ubuntu",
@@ -56,7 +56,7 @@ interface CategoryIcon {
 export const CATEGORIES_ICON: CategoryIcon = {
     "Python": <FaPython />,
     "TypeScript": <SiTypescript />,
-    "React/Nextjs": <FaReact />,
+    "React/Next.js": <FaReact />,
     "C++": <TbBrandCpp />,
     "MachineLearning": <AiTwotoneTool />,
     "Ubuntu": <FaUbuntu />,

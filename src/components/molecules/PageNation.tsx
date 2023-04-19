@@ -17,12 +17,12 @@ const PageNation = ({currentPage, numPages}: PagiNationProps) => {
 
 
     return (
-        <div className="mt-6">
-            <ul className="flex pl-0 list-none my-2">
+        <div className="mt-6 flex justify-center">
+            <ul className="flex list-none my-2 space-x-2">
                 {!isFirst && (
                     <Link href={prevPage}>
-                        <li className="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-gray-800 mr-1
-                                       hover:bg-gray-200 cursor-pointer" >
+                        <li className="relative block py-2 px-3 leading-tight bg-white border-2 border-secondBrawn duration-300
+                                     hover:text-white hover:bg-secondBrawn cursor-pointer rounded-lg " >
                                         Previous
                         </li>
                     </Link>
@@ -30,17 +30,22 @@ const PageNation = ({currentPage, numPages}: PagiNationProps) => {
 
                 {Array.from({length: numPages}, (_, i) => (
                     <Link key={i} href={`/blog/page/${i + 1}`}>
-                        <li className="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-gray-800 mr-1
-                                       hover:bg-gray-200 cursor-pointer" >
-                                        {i + 1}
+                        {currentPage === (i + 1) 
+                        ?<li className="relative block py-2 px-3 leading-tight border-2 border-secondBrawn 
+                                     text-white bg-secondBrawn cursor-pointer rounded-lg " >
+                            {i + 1}
                         </li>
+                        :<li className="relative block py-2 px-3 leading-tight bg-white border-2 border-secondBrawn duration-300
+                        hover:text-white hover:bg-secondBrawn cursor-pointer rounded-lg " >
+                           {i + 1}
+                        </li>}
                     </Link>
                 ))}
 
                 {!isLast && (
                     <Link href={nextPage}>
-                        <li className="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-gray-800 mr-1
-                                       hover:bg-gray-200 cursor-pointer" >
+                        <li className="relative block py-2 px-3 leading-tight bg-white border-2 border-secondBrawn duration-300
+                                     hover:text-white hover:bg-secondBrawn cursor-pointer rounded-lg " >
                                         Next
                         </li>
                     </Link>

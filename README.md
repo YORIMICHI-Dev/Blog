@@ -1,5 +1,5 @@
 ## Blogについて
-Nextjs, React, Tailwindを使用してブログサイトを作成しました。
+Next.js, React, Tailwindを使用してブログサイトを作成しました。
 一応ライセンス設定していますが、改変や再配布などは自由です。
 もし使えそうな部品があり使っていただければ嬉しいです。
 
@@ -8,7 +8,7 @@ Nextjs, React, Tailwindを使用してブログサイトを作成しました。
 <li>Ubuntu 22.04LTS</li>
 <li>TypeScript 4.9.5</li>
 <li>Node.js v18.14.1</li>
-<li>Nextjs 13.2.3</li>
+<li>Next.js 13.2.3</li>
 <li>Tailwind 3.2.7</li>
 </ul>
 

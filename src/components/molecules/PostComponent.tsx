@@ -6,7 +6,7 @@ import { PostMeta } from "@/utils/post";
 function PostComponent( { meta }: {meta: PostMeta} ) {
 
     return (
-        <div className='flex flex-col justify-between px-10 py-6 space-y-4 bg-white rounded-lg shadow-md mt-6'>
+        <div className='flex flex-col justify-between px-10 py-6 space-y-4 bg-white rounded-lg shadow-xl mt-6'>
             <div className="space-y-2">
                 <div className="group rounded-lg object-fit overflow-hidden mb-4">
                     <Link href={`/blog/${meta.slug}`} className="relative group rounded-lg shadow-lg object-fit overflow-hidden">

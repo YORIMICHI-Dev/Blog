@@ -46,8 +46,8 @@ export const getStaticProps = async () => {
 		props: {
 			posts: {
 				"codePost": codePost.slice(0,1).at(0),
-				"webPost": codePost.slice(0,1).at(0),
-				"toolPost": codePost.slice(0,1).at(0),
+				"webPost": webPost.slice(0,1).at(0),
+				"toolPost": toolPost.slice(0,1).at(0),
 			}
 		},
 	}

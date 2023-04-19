@@ -23,20 +23,20 @@
 /* Heroの棒グラフ */
 @media screen(lg) {
   .bg-hero {
-    width: 2000px;
+    width: 1000px;
     height: 200px;
     left: 30%;
-    @apply absolute rounded-l-full top-40;
     background-image: linear-gradient(to right, #C8B6A6, #F0ECE6);
-}
+    @apply absolute rounded-l-full top-40;
+  }
 }
 
 @media screen(xl) {
   .bg-hero {
-    width: 2000px;
+    width: 1000px;
     height: 200px;
     left: 30%;
-    @apply absolute rounded-l-full top-80;
     background-image: linear-gradient(to right, #C8B6A6, #F0ECE6);
+    @apply absolute rounded-l-full top-80;
   }
 }
