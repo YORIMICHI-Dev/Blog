@@ -7,13 +7,13 @@ const cpp_debug = () => {
 <>
 {/* Start */}
 
-<H2>{"NextjsをAWSのEC2上にデプロイする"}</H2>
+<H2>{"Next.jsをAWSのEC2上にデプロイする"}</H2>
 <CaseBlock caseList={[
-    {caseString:"AWSのEC2インスタンス上にNextjsをデプロイしたいとき", check:true,},
-    {caseString:"Nextjsをインスタンス上でデーモンとして常に動作させたいとき", check:true,},
+    {caseString:"AWSのEC2インスタンス上にNext.jsをデプロイしたいとき", check:true,},
+    {caseString:"Next.jsをインスタンス上でデーモンとして常に動作させたいとき", check:true,},
 ]} />
-<P>{"NextjsをAWSのEC2インスタンス上にデプロイする場合は、HTTPリクエストを受け取るサーバーとNextjsを常に動かし続けるデーモン化が必要です。"}</P>
-<P>{"HTTPリクエストを受け取るサーバーとしてNginxを使用し、Nextjsをpm2コマンドでデーモン化しEC2インスタンス上でデプロイしました。"}</P>
+<P>{"Next.jsをAWSのEC2インスタンス上にデプロイする場合は、HTTPリクエストを受け取るサーバーとNext.jsを常に動かし続けるデーモン化が必要です。"}</P>
+<P>{"HTTPリクエストを受け取るサーバーとしてNginxを使用し、Next.jsをpm2コマンドでデーモン化しEC2インスタンス上でデプロイしました。"}</P>
 <Alert>{"EC2インスタンスは既に立ち上げている状態を想定しています。"}</Alert>
 
 <H2>{"HTTPリクエストを受け取るサーバーを立ち上げる"}</H2>
@@ -94,12 +94,12 @@ ubuntu@ip-10-0-0-233:~$ sudo systemctl status nginx
 }</CodeView>
 </Li>
 </Ol>
-<P>{"ここまでで、HTTPリクエストがEC2インスタンスにきたときポート3000のNextjsに飛ばせるように設定が終わった。"}</P>
+<P>{"ここまでで、HTTPリクエストがEC2インスタンスにきたときポート3000のNext.jsに飛ばせるように設定が終わった。"}</P>
 
 
-<H2>{"Nextjsを立ち上げる"}</H2>
-<H3>{"Nextjsアプリの立ち上げ"}</H3>
-<P>{"立ち上げたいNextjsのアプリをEC2インスタンス上に移動させる。移動方法はgitによるcloneが一般的だと思われる。またはssh接続よりローカルからコピーする。"}</P>
+<H2>{"Next.jsを立ち上げる"}</H2>
+<H3>{"Next.jsアプリの立ち上げ"}</H3>
+<P>{"立ち上げたいNext.jsのアプリをEC2インスタンス上に移動させる。移動方法はgitによるcloneが一般的だと思われる。またはssh接続よりローカルからコピーする。"}</P>
 <P>{"その後、プロジェクトディレクトリ内でビルドする。"}</P>
 {/* <ReferenceBlock href={} /> */}
 <CodeView language={"bash"} filename={"build"}>{
@@ -107,7 +107,7 @@ ubuntu@ip-10-0-0-233:~$ sudo systemctl status nginx
 }</CodeView>
 
 
-<H2>{"Nextjsをデーモン化する"}</H2>
+<H2>{"Next.jsをデーモン化する"}</H2>
 <H3>{"pm2コマンドによるデーモン化"}</H3>
 <P>{"Next.jsを動かしているNode.jsをデーモンとして実行するプロセスマネージャであるpm2をインストールする。"}</P>
 <Ol>

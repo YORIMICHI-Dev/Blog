@@ -27,7 +27,7 @@ const IndexWork = () => {
                            imgSrc={workImg1} 
                            icon={faWandMagicSparkles} 
                            upperText={"My Blog Site"} 
-                           lowerText={"Skill: Nextjs, TypeScript, Tailwind, AWS"} />
+                           lowerText={"Skill: Next.js, TypeScript, Tailwind, AWS"} />
             </div>
         </section>
     );

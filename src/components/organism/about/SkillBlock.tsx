@@ -68,7 +68,7 @@ const Skills = [
 		],
 		skill: [
 			"Django",
-			"React / Nodejs / Nextjs",
+			"React / Nodejs / Next.js",
 			"HTML / CSS (Tailwind)"
 		],
 	},

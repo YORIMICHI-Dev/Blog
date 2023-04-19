@@ -7,11 +7,11 @@ const cpp_debug = () => {
 <>
 {/* Start */}
 
-<H2>{"React, Nextjsアプリの立ち上げをクイックスタートする"}</H2>
+<H2>{"React, Next.jsアプリの立ち上げをクイックスタートする"}</H2>
 <CaseBlock caseList={[
-    {caseString:"React, Nextjsの立ち上げ環境の設定を簡単にしたいとき", check:true,},
+    {caseString:"React, Next.jsの立ち上げ環境の設定を簡単にしたいとき", check:true,},
 ]} />
-<P>{"Reactなどを立ち上げるためにはNodejsをインストールする必要がある。一回インストールしたら基本的に変える必要がないため新しく立ち上げる際に忘れやすいためメモする。"}</P>
+<P>{"Reactなどを立ち上げるためにはNode.jsをインストールする必要がある。一回インストールしたら基本的に変える必要がないため新しく立ち上げる際に忘れやすいためメモする。"}</P>
 
 
 <H2>{"Nodejsをインストールする"}</H2>
@@ -52,9 +52,9 @@ npm -v`
 }</CodeView>
 
 
-<H2>{"ReactやNextjsの新規プロジェクトを立ち上げる"}</H2>
+<H2>{"ReactやNext.jsの新規プロジェクトを立ち上げる"}</H2>
 <H3>{"create-react-app@, create-next-app@を実行する"}</H3>
-<P>{"ReactやNextjsの新規プロジェクトを立ち上げるためにnpxコマンドを叩く。"}</P>
+<P>{"ReactやNext.jsの新規プロジェクトを立ち上げるためにnpxコマンドを叩く。"}</P>
 <CodeView >{
 `// Reactの場合
 npx create-react-app@
@@ -101,7 +101,7 @@ event - compiled successfully in 279 ms (137 modules)
 
 <H2>{"まとめ"}</H2>
 <ConclusionBlock conclusionList={[
-    {caseString:"React, Nextjsの立ち上げ環境を設定方法をまとめた。", check:true,},
+    {caseString:"React, Next.jsの立ち上げ環境を設定方法をまとめた。", check:true,},
     {caseString:"Nodejsまたはnパッケージがインストールできれば速攻で始められる。", check:true,},
 ]} />
 

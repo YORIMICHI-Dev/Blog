@@ -39,10 +39,10 @@ const IndexSkill = ({posts}: Props) => {
             label: "Web App",
             icon: faGlobe,
             panel: "Knowledge of Web Application",
-            parentCategory: "Nextjs, React, AWS, and so on.",
+            parentCategory: "Next.js, React, AWS, and so on.",
             paragraph: [
               "Web系の技術で忘れないようにメモしています",
-              "Nextjs, AWSなど"
+              "Next.js, AWSなど"
             ],
             post:webPost,
         },
