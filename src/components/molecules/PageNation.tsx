@@ -22,7 +22,7 @@ const PageNation = ({currentPage, numPages}: PagiNationProps) => {
                 {!isFirst && (
                     <Link href={prevPage}>
                         <li className="relative block py-2 px-3 leading-tight bg-white border-2 border-secondBrawn duration-300
-                                     hover:text-white hover:bg-dBrawn cursor-pointer rounded-lg " >
+                                     hover:text-white hover:bg-secondBrawn cursor-pointer rounded-lg " >
                                         Previous
                         </li>
                     </Link>

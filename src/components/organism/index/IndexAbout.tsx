@@ -14,7 +14,7 @@ const contents = [
     },
     {
         imgSrc: skillImg,
-        context: "業務や趣味で身につけているスキルをまとめています",
+        context: "業務や趣味で身につけたスキルをまとめています",
         link: "/about/#skill",
         buttonText: "Go to Skill",
     },
