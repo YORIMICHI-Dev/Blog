@@ -9,8 +9,8 @@ import Key from "./Key";
 import Alert from "./Alert";
 import CodeView from "./CodeView";
 import CaseBlock from "./CaseBlock";
-import ConclusionBlock from "./CoclusionBlock";
-import RefarenceBlock from "./RefarenceBlock";
+import ImageBlock from "./ImageBlock";
+import ConclusionBlock from "./ConclusionBlock";
+import ReferenceBlock from "./ReferenceBlock";
 
-
-export { H1, H2, H3, P, Ol, Li, Table, Key, Alert, CaseBlock, CodeView, ConclusionBlock, RefarenceBlock }
+export { H1, H2, H3, P, Ol, Li, Table, Key, Alert, CaseBlock, ImageBlock, CodeView, ConclusionBlock, ReferenceBlock }

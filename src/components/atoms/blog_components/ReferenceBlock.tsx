@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
 import { EternalMetaData } from "@/utils/metaData";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 
+import thumbnail from "public/images/404.png"
 
 interface Props {
   href: string;
 }
 
 
-const RefarenceBlock = ({ href }: Props) => {
+const ReferenceBlock = ({ href }: Props) => {
     const [metadata, setMetadata] = useState<EternalMetaData>({
         title: null,
         description: null,
@@ -44,13 +44,13 @@ const RefarenceBlock = ({ href }: Props) => {
 
     return (
         <>
-            <div className="my-14">
+            <div className="my-14 duration-500 hover:opacity-80">
                 <Link href={href}>
                     <div className="relative flex flex-row p-6 space-x-4 items-center rounded-lg shadow-lg border-x-2 border-secondBrawn">
                         <div>
-                            {metadata.thumbnail && (
-                                <Image src={metadata.thumbnail} width={300} height={200} alt="Thumbnail" />
-                            )}                    
+                            {metadata.thumbnail ? <Image src={metadata.thumbnail} width={300} height={200} alt="Thumbnail" />
+                                                : <Image src={thumbnail} width={300} height={200} alt="Thumbnail" />
+                            }                    
                         </div>
                         <div className="flex flex-col space-y-4">
                             <span className="text-md md:text-xl font-semibold">Title: {metadata.title}</span>
@@ -69,4 +69,4 @@ const RefarenceBlock = ({ href }: Props) => {
     );
 };
 
-export default RefarenceBlock;
+export default ReferenceBlock;
