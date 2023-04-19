@@ -1,5 +1,5 @@
 // Components for Blog
-import {H2, H3, P, Ol, Li, Key, Table, Alert, CodeView, CaseBlock, ConclusionBlock, RefarenceBlock} from "@/components/atoms/blog_components/BlogComponents"
+import {H2, H3, P, Ol, Li, Key, Table, Alert, CodeView, CaseBlock, ConclusionBlock, ReferenceBlock} from "@/components/atoms/blog_components/BlogComponents"
 
 const cpp_debug = () => {
     return (
@@ -18,7 +18,7 @@ const cpp_debug = () => {
 <P>{"pngファイルを圧縮する方法は様々あるが、コマンドだけですばやく圧縮するpngquantをインストールする。"}</P>
 <P>{"先にインストールだけすれば、コマンドを実行するだけで簡単にpngファイルを圧縮することができる。"}</P>
 <P>{"開発者のサイトとGithubのページは次です。"}</P>
-<RefarenceBlock href={"https://github.com/kornelski/pngquant"} />
+<ReferenceBlock href={"https://github.com/kornelski/pngquant"} />
 
 
 <H2>{"pngquantを使う"}</H2>

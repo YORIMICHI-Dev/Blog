@@ -1,5 +1,5 @@
 // Components for Blog
-import {H2, H3, P, Ol, Li, Key, Table, Alert, CodeView, CaseBlock, ConclusionBlock, RefarenceBlock} from "@/components/atoms/blog_components/BlogComponents"
+import {H2, H3, P, Ol, Li, Key, Table, Alert, CodeView, CaseBlock, ConclusionBlock, ReferenceBlock} from "@/components/atoms/blog_components/BlogComponents"
 
 
 const cpp_debug = () => {
@@ -45,7 +45,7 @@ reboot `}</CodeView>
     {caseString:"GUIではデバイスが反応しないため、CUI画面からインストールする", check:true,},
 ]} />
 <H3>{"参考"}</H3>
-<RefarenceBlock href={"https://askubuntu.com/questions/1033767/keyboard-not-working-after-update-to-18-04"}/>
+<ReferenceBlock href={"https://askubuntu.com/questions/1033767/keyboard-not-working-after-update-to-18-04"}/>
 
 {/* Finish */}
 </>

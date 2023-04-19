@@ -1,5 +1,5 @@
 // Components for Blog
-import {H2, H3, P, Ol, Li, Table, CodeView, CaseBlock, ConclusionBlock, RefarenceBlock} from "@/components/atoms/blog_components/BlogComponents"
+import {H2, H3, P, Ol, Li, Table, CodeView, CaseBlock, ConclusionBlock, ReferenceBlock} from "@/components/atoms/blog_components/BlogComponents"
 
 
 const spdlog = () => {
@@ -21,7 +21,7 @@ const spdlog = () => {
 <P>{"spdlogとはC++で開発されたログ機能を提供するライブラリです。"}</P>
 <P>{"ライブラリはヘッダファイルのみまたはコンパイル形式の2種類があります。好きな方を選択しましょう。今回は、簡単にインストールできるヘッダファイルを使用する方法を説明します。"}</P>
 <P>{"spdlog開発者のGithubは次です。"}</P>
-<RefarenceBlock href={"https://github.com/gabime/spdlog"}/>
+<ReferenceBlock href={"https://github.com/gabime/spdlog"}/>
 
 
 <H3>{"spdlogをインストールする"}</H3>
@@ -118,7 +118,7 @@ int main(void)
         ["%M", "何分か表示", "30"],
         ["%^, %$", "入力したテキストを表示", "og level is info[green]"],
         ]}/>
-<RefarenceBlock href={"https://github.com/gabime/spdlog/wiki/3.-Custom-formatting"}/>
+<ReferenceBlock href={"https://github.com/gabime/spdlog/wiki/3.-Custom-formatting"}/>
 
 <H3>{"ログをファイルに出力する"}</H3>
 <P>{"ログ内容をログファイルとして出力することもできます。基本的にはファイルに出力しています。"}</P>
