@@ -30,10 +30,15 @@ const PageNation = ({currentPage, numPages}: PagiNationProps) => {
 
                 {Array.from({length: numPages}, (_, i) => (
                     <Link key={i} href={`/blog/page/${i + 1}`}>
-                        <li className="relative block py-2 px-3 leading-tight bg-white border-2 border-secondBrawn duration-300
-                                     hover:text-white hover:bg-secondBrawn cursor-pointer rounded-lg " >
-                                        {i + 1}
+                        {currentPage === (i + 1) 
+                        ?<li className="relative block py-2 px-3 leading-tight border-2 border-secondBrawn 
+                                     text-white bg-secondBrawn cursor-pointer rounded-lg " >
+                            {i + 1}
                         </li>
+                        :<li className="relative block py-2 px-3 leading-tight bg-white border-2 border-secondBrawn duration-300
+                        hover:text-white hover:bg-secondBrawn cursor-pointer rounded-lg " >
+                           {i + 1}
+                        </li>}
                     </Link>
                 ))}
 
