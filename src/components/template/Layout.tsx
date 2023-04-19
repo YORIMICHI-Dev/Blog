@@ -31,7 +31,7 @@ function Layout({ title = DEFAULT_TITLE, keywords = DEFAULT_KEYWORDS, descriptio
                 <link rel="icon" href="public/images/favicon.ico" />
             </Head>
 
-            <div className="flex flex-col h-screen justify-between min-w-max">
+            <div className="flex flex-col h-screen justify-between min-w-max lg:overflow-x-hidden">
                 <Header />
 
                 <Main >{children}</Main>
