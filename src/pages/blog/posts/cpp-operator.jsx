@@ -1,5 +1,5 @@
 // Components for Blog
-import {H2, H3, P, Ol, Li, Table, CodeView, CaseBlock, ConclusionBlock, RefarenceBlock} from "@/components/atoms/blog_components/BlogComponents"
+import {H2, H3, P, Ol, Li, Table, Key, Alert, CaseBlock, ImageBlock, CodeView, ConclusionBlock, ReferenceBlock} from "@/components/atoms/blog_components/BlogComponents"
 
 
 const cpp_debug = () => {
