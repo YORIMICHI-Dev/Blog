@@ -47,12 +47,12 @@ const ReferenceBlock = ({ href }: Props) => {
             <div className="my-14 duration-500 hover:opacity-80">
                 <Link href={href}>
                     <div className="relative flex flex-row p-6 space-x-4 items-center rounded-lg shadow-lg border-x-2 border-secondBrawn">
-                        <div>
+                        <div className="w-1/5">
                             {metadata.thumbnail ? <Image src={metadata.thumbnail} width={300} height={200} alt="Thumbnail" />
                                                 : <Image src={thumbnail} width={300} height={200} alt="Thumbnail" />
                             }                    
                         </div>
-                        <div className="flex flex-col space-y-4">
+                        <div className="flex flex-col space-y-4 w-4/5">
                             <span className="text-md md:text-xl font-semibold">Title: {metadata.title}</span>
                             <div className="hidden md:block">
                                 <span className="text-md">{metadata.description}</span>                                

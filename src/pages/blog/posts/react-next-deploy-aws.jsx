@@ -54,21 +54,21 @@ ubuntu@ip-10-0-0-233:~$ sudo systemctl status nginx
 </Ol>
 
 <H3>{"Nginxのリバースプロキシを設定する"}</H3>
-<P>{"HTTPリクエストがきたらNexjsが動作しているポート3000にリバースプロキシするように設定する。"}</P>
+<P>{"HTTPリクエストがきたらNext.jsが動作しているポート3000にリバースプロキシするように設定する。"}</P>
 <Ol>
 <Li num={"1"} title={"Nginx設定ファイル作成"}>
-<P>{"Nginxの設定ファイルを作成し、/etc/nginx/sites-available/に保存するため、はじめに設定ファイルを作成する。設定ファイル名は自由に決めても問題ない。"}</P>
+<P>{"Nginxの設定ファイルを/etc/nginx/sites-available/に作成する。設定ファイル名は自由に決めても問題ない。"}</P>
 <CodeView language={"bash"} filename={"touch"}>{
-`sudo touch /etc/nginx/sites-available/your-site.conf`
+`sudo touch /etc/nginx/sites-available/yorimichi-dev.com.conf`
 }</CodeView>
 <P>{"続いてnanoかvimコマンドでファイルを開き、設定ファイルを更新する。"}</P>
 <CodeView language={"bash"} filename={"edit"}>{
-`sudo nano /etc/nginx/sites-available/your-site.conf`
+`sudo nano /etc/nginx/sites-available/yorimichi-dev.com.conf`
 }</CodeView>
 <CodeView language={"json"} filename={".conf"}>{
 `server {
     listen 80;
-    server_name example.com;
+    server_name yorimichi-dev.com;
 
     location / {
         proxy_pass http://localhost:3000;
@@ -82,6 +82,10 @@ ubuntu@ip-10-0-0-233:~$ sudo systemctl status nginx
 }</CodeView>
 <P>{"2-3行目はリクエスト（HTTP）とサーバーのドメイン名を設定する。サーバードメイン名がない場合はそのままでも問題ない。"}</P>
 <P>{"locationは指定されたリクエストURLに一致するHTTPリクエストを処理し、proxy_passでポート3000にリバースプロキシを行う。他はWebsocketの設定のため割愛する。"}</P>
+<P>{"作成した設定ファイルへのシンボリックリンクを/etc/nginx/sites-enabledディレクトリに作成する。作成しないと、nginxサーバーが起動できない。"}</P>
+<CodeView language={"bash"} filename={"link"}>{
+`sudo ln -s /etc/nginx/sites-available/yorimichi.com.conf /etc/nginx/sites-enabled/`
+}</CodeView>
 <P>{"設定後、Nginxの設定が間違えていないか構文をチェックする。"}</P>
 <CodeView language={"bash"} filename={"check"}>{
 `sudo nginx -t`
@@ -162,10 +166,10 @@ pm2 logs nextjs-app`
 </Ol>
 
 
-<H2>{"デプロイできている確認"}</H2>
+<H2>{"デプロイできているか確認"}</H2>
 <H3>{"HTTPリクエストからNext.jsにアクセスできるか確認"}</H3>
 <P>{"最後に、EC2インスタンスのドメイン名またはIPアドレスからデプロイしたNext.jsが接続できているか確認する。"}</P>
-<ImageBlock imgSrac={img1} />
+<ImageBlock imgSrc={img1} />
 
 
 <H2>{"まとめ"}</H2>
