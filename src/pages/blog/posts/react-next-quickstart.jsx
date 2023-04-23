@@ -1,6 +1,6 @@
 // Components for Blog
 import {H2, H3, P, Ol, Li, Key, Table, Alert, ImageBlock, CodeView, CaseBlock, ConclusionBlock, ReferenceBlock} from "@/components/atoms/blog_components/BlogComponents"
-import img1 from "public/images/posts/react-next-quickstart/react-next-quickstart.png"
+
 
 const cpp_debug = () => {
     return (
@@ -97,7 +97,7 @@ event - compiled client and server successfully in 5.2s (170 modules)
 wait  - compiling...
 event - compiled successfully in 279 ms (137 modules)
 `}</CodeView>
-<ImageBlock imgSrc={img1}/>
+<ImageBlock imgSrc={"/blog/posts/react-next-quickstart_wdx3hg"}/>
 
 <H2>{"まとめ"}</H2>
 <ConclusionBlock conclusionList={[

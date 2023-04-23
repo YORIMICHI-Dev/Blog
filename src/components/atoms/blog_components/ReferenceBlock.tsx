@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import CloudinaryImage from "@/components/molecules/CloudinaryImage";
 import { EternalMetaData } from "@/utils/metaData";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
-
-import thumbnail from "public/images/404.png"
 
 interface Props {
   href: string;
@@ -49,7 +48,7 @@ const ReferenceBlock = ({ href }: Props) => {
                     <div className="relative flex flex-row p-6 space-x-4 items-center rounded-lg shadow-lg border-x-2 border-secondBrawn">
                         <div className="w-1/5">
                             {metadata.thumbnail ? <Image src={metadata.thumbnail} width={300} height={200} alt="Thumbnail" />
-                                                : <Image src={thumbnail} width={300} height={200} alt="Thumbnail" />
+                                                : <CloudinaryImage publicId={"/blog/pages/404_a5lcee"} width={300} height={200} alt="Thumbnail" />
                             }                    
                         </div>
                         <div className="flex flex-col space-y-4 w-4/5">

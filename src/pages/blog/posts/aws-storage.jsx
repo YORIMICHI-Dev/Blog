@@ -1,6 +1,6 @@
 // Components for Blog
 import {H2, H3, P, Ol, Li, Table, Key, Alert, CaseBlock, ImageBlock, CodeView, ConclusionBlock, ReferenceBlock} from "@/components/atoms/blog_components/BlogComponents"
-import img1 from "public/images/posts/aws-storage/aws-storage.png"
+
 
 const cpp_debug = () => {
     return (
@@ -42,7 +42,7 @@ nvme0n1       259:1    0  16G  0 disk
 <Li num={"1"} title={"EC2インスタンスのEBSサイズ変更"}>
 <P>{"AWSにログインし対象のEC2インスタンスのEBSボリュームを選択する。"}</P>
 <P>{"続いて、ボリューム画面のアクションから変更ボタンを押す。するとボリュームの変更画面に飛ぶため、そこからサイズを変更する。"}</P>
-<ImageBlock imgSrc={img1} />
+<ImageBlock imgSrc={"/blog/posts/aws-storage_qer6qy"} />
 </Li>
 <Li num={"2"} title="パーティションの割当">
 <P>{"続いて、EC2インスタンスに接続しパーティションサイズを変更する。"}</P>

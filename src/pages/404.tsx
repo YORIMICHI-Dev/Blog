@@ -23,7 +23,7 @@ function NotFoundPage() {
                     </div>
                     {/* Image */}
                     <div className="mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
-                        <CloudinaryImage publicId="" alt="404" width={300} height={300} className="lg:top-24 xl:top-0" />  
+                        <CloudinaryImage publicId="/blog/pages/404_a5lcee" alt="404" width={500} height={500} className="lg:top-24 xl:top-0" />  
                     </div>
                 </div>
             </section>

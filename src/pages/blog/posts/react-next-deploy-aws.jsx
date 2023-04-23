@@ -1,6 +1,6 @@
 // Components for Blog
 import {H2, H3, P, Ol, Li, Key, Table, Alert, ImageBlock, CodeView, CaseBlock, ConclusionBlock, ReferenceBlock} from "@/components/atoms/blog_components/BlogComponents"
-import img1 from "public/images/posts/react-next-deploy-aws/react-next-deploy-aws.png"
+
 
 const cpp_debug = () => {
     return (
@@ -169,7 +169,7 @@ pm2 logs nextjs-app`
 <H2>{"デプロイできているか確認"}</H2>
 <H3>{"HTTPリクエストからNext.jsにアクセスできるか確認"}</H3>
 <P>{"最後に、EC2インスタンスのドメイン名またはIPアドレスからデプロイしたNext.jsが接続できているか確認する。"}</P>
-<ImageBlock imgSrc={img1} />
+<ImageBlock imgSrc={"/blog/posts/react-next-deploy-aws_sh3inc"} />
 
 
 <H2>{"まとめ"}</H2>
