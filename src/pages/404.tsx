@@ -1,8 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
+import CloudinaryImage from "@/components/molecules/CloudinaryImage";
 import Layout from "@/components/template/Layout";
 
-import notFoundImg from "/public/images/404.png"
 
 function NotFoundPage() {
     return (
@@ -24,7 +23,7 @@ function NotFoundPage() {
                     </div>
                     {/* Image */}
                     <div className="mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
-                        <Image src={notFoundImg} alt="404" className="lg:top-24 xl:top-0"/>                        
+                        <CloudinaryImage publicId="" alt="404" width={300} height={300} className="lg:top-24 xl:top-0" />  
                     </div>
                 </div>
             </section>

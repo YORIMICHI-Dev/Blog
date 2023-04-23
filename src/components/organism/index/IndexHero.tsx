@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import heroImage from "public/images/about1.jpg"
+import CloudinaryImage from "@/components/molecules/CloudinaryImage";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -40,7 +39,7 @@ const IndexHero = () => {
                 {/* Image */}
                 <div className="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
                     <div className="bg-hero"></div>
-                    <Image src={heroImage} alt="" className="relative z-10 lg:top-0 rounded-lg"/>
+                    <CloudinaryImage publicId="blog/pages/about1_d6upjk" width={1000} height={1000} className="relative z-10 lg:top-0 rounded-lg" />
                 </div>
             </div>
         </section>
