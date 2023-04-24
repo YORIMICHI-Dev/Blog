@@ -1,7 +1,6 @@
 // Components for Blog
 import {H2, H3, P, Ol, Li, Table, Key, Alert, CaseBlock, ImageBlock, CodeView, ConclusionBlock, ReferenceBlock} from "@/components/atoms/blog_components/BlogComponents"
-import img1 from "public/images/posts/ubuntu-certificate/ubuntu-certificate1.png"
-import img2 from "public/images/posts/ubuntu-certificate/ubuntu-certificate2.png"
+
 
 const cpp_debug = () => {
     return (
@@ -30,7 +29,7 @@ const cpp_debug = () => {
 <ReferenceBlock href={"https://certbot.eff.org/"}/>
 <P>{"certbotのホームページに移動するとHTTPが動いているサーバーが聞かれるため、自分の環境を選択してインストール方法を確認します。"}</P>
 <Alert>{"私の環境はUbuntu 22.04LTSとnginxのため、以下の説明は私の環境準拠になります。"}</Alert>
-<ImageBlock imgSrc={img1} />
+<ImageBlock imgSrc={"/blog/posts/ubuntu-certificate1_wn7kpm"} />
 <P>{"選択したらインストール方法と証明書取得方法のページに移動するため、指示に従って順番に行っていく。"}</P>
 <Ol>
 <Li num={"1"} title={"SSH接続よりサーバーへ接続する"}>
@@ -136,7 +135,7 @@ Congratulations, all simulated renewals succeeded:
 
 </Ol>
 <P>{"これでSSL/TLS証明の発行とnginxとのHTTPS通信設定が完了します。最後に実際にnginxサーバーにブラウザからアクセスしてみます。（私の環境はNext.jsにバウンドされています。）"}</P>
-<ImageBlock imgSrc={img2} />
+<ImageBlock imgSrc={"/blog/posts/ubuntu-certificate2_iycopq"} />
 
 
 <H2>{"まとめ"}</H2>

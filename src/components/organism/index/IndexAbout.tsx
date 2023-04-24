@@ -1,25 +1,22 @@
-import Image from "next/image"
 import Link from "next/link"
-import profileImg from "public/images/home_profile.png"
-import skillImg from "public/images/home_skill.png"
-import historyImg from "public/images/home_history.png"
+import CloudinaryImage from "@/components/molecules/CloudinaryImage"
 
 
 const contents = [
     {
-        imgSrc: profileImg,
+        imgSrc: "/blog/pages/home_profile_php4ui",
         context: "YORIMICHIの簡単なプロフィールをまとめています",
         link: "/about/#profile",
         buttonText: "Go to Profile",
     },
     {
-        imgSrc: skillImg,
+        imgSrc: "/blog/pages/home_skill_olw59o",
         context: "業務や趣味で身につけたスキルをまとめています",
         link: "/about/#skill",
         buttonText: "Go to Skill",
     },
     {
-        imgSrc: historyImg,
+        imgSrc: "/blog/pages/home_history_nmwhiz",
         context: "学生から現在までの経歴をまとめています",
         link: "/about/#history",
         buttonText: "Go to History"
@@ -45,7 +42,7 @@ const IndexAbout = () => {
                     {contents.map((content, index) => {
                         return (
                             <div key={index} className="flex flex-col items-center justify-center space-y-4 lg:space-y-8 mx-auto rounded-lg p-6 shadow-md">     
-                                <Image src={content.imgSrc} alt="" className="rounded-xl w-3/5 xl:w-auto"/>
+                                <CloudinaryImage publicId={content.imgSrc} width={600} height={600} className="rounded-xl w-3/5 xl:w-auto" />
                                 <div className="flex flex-col items-center space-y-6">
                                     <p className=" text-grayishBlue">{content.context}</p>
                                     <Link href={content.link} className="px-3 py-1 font-semibold duration-300 rounded-md shadow-ld border-2 border-secondaryGreen

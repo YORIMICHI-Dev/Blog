@@ -1,15 +1,14 @@
 import PageH2 from "../../atoms/PageH2";
-import LinkPanel from "@/components/molecules/LinkPanel";
+import LinkPanelCloudinary from "@/components/molecules/LinkPanelCloudinary";
 
 import { faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
-import workImg1 from "public/images/work1.png"
 
 
 const Works = [
     {
         id: "myBlog",
         href: "/",
-        imgSrc: workImg1,
+        imgSrc: "/blog/pages/work1_vbyiru",
         icon: faWandMagicSparkles,
         upperText: "MyBlogSite",
         lowerText: "Skill: Next.js, TypeScript, Tailwind, AWS",
@@ -40,7 +39,13 @@ const WorkBlock = () => {
                     <section key={work.id} id={work.id}>
                         <div className="flex flex-col xl:items-center xl:flex-row xl:space-x-8">
                             <div className="overflow-hidden rounded-lg mx-auto xl:w-2/5 shadow-lg">
-                                <LinkPanel href={work.href} imgSrc={work.imgSrc} icon={work.icon} upperText={work.upperText} lowerText={work.lowerText} />
+                                <LinkPanelCloudinary href={work.href} 
+                                                     imgSrc={work.imgSrc}
+                                                     width={600}
+                                                     height={600} 
+                                                     icon={work.icon} 
+                                                     upperText={work.upperText} 
+                                                     lowerText={work.lowerText} />
                             </div>
 
                             <div className="space-y-5 py-4 xl:w-3/5">

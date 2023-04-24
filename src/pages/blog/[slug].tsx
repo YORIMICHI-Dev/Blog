@@ -3,6 +3,7 @@ import fs from "fs"
 import path from "path";
 
 import Image from "next/image";
+import CloudinaryImage from "@/components/molecules/CloudinaryImage";
 import LayoutWithSidebar from "@/components/template/LayoutWithSidebar";
 import CategoryLabel from "@/components/molecules/CategoryLabel";
 import Breadcrumb from "@/components/molecules/Breadcrumb";
@@ -35,7 +36,7 @@ function PostPage({meta, slug}: Props) {
                     {meta.date}
                 </div>
                 <div>
-                    <Image src={meta.cover_image} width={1800} height={600} alt='' className='rounded-3xl p-3' />                    
+                    <CloudinaryImage publicId={meta.cover_image} width={1800} height={600} alt='' className='rounded-3xl p-3' />                    
                 </div>
 
                 <div className="flex justify-between items-center bg-gray-100 p-2 my-8">

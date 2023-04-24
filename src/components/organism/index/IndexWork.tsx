@@ -1,13 +1,12 @@
 import { faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
-
-import LinkPanel from "@/components/molecules/LinkPanel";
-import workImg1 from "public/images/work1.png"
+import LinkPanelCloudinary from "@/components/molecules/LinkPanelCloudinary";
 
 
 const works = {
     title: "My Blog Site!",
     icon: faWandMagicSparkles,
 }
+
 
 const IndexWork = () => {
     return (
@@ -23,8 +22,10 @@ const IndexWork = () => {
             {/* Grid */}
             <div className="grid gap-4 px-4 md:grid-cols-3">
                 {/* Image 1 */}
-                <LinkPanel href={"work/#myBlog"} 
-                           imgSrc={workImg1} 
+                <LinkPanelCloudinary href={"work/#myBlog"} 
+                           imgSrc={"/blog/pages/work1_vbyiru"}
+                           width={600}
+                           height={600}
                            icon={faWandMagicSparkles} 
                            upperText={"My Blog Site"} 
                            lowerText={"Skill: Next.js, TypeScript, Tailwind, AWS"} />

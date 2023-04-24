@@ -1,17 +1,15 @@
 import Link from "next/link";
-import Image from "next/image";
+import CloudinaryImage from "./CloudinaryImage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter} from "@fortawesome/free-brands-svg-icons";
 import { faUserAlt } from "@fortawesome/free-solid-svg-icons";
-
-import profileImg from "public/images/card_img.png"
 
 
 const ProfileCard = () => {
     return (
         <div className="w-full bg-white rounded-lg shadow-md">
             <div className="flex flex-col font-bold items-center justify-center space-y-5 text-xl p-3">
-                <Image src={profileImg} alt="profile" className="rounded-lg"/>
+                <CloudinaryImage publicId="/blog/pages/card_img_jvhsrj" width={300} height={250} alt="profile" className="rounded-xl" />
                 <div className="flex flex-col items-center">
                     <p>YORIMICHI</p>
                     <p className="text-sm text-grayishBlue">Enginner</p>                        

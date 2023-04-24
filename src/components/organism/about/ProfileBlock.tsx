@@ -1,4 +1,4 @@
-import Image from "next/image";
+import CloudinaryImage from "@/components/molecules/CloudinaryImage";
 
 import img1 from "public/images/about1.jpg"
 import img2 from "public/images/about2.jpg"
@@ -8,7 +8,7 @@ const ProfileBlock = () => {
         <div className="mx-auto max-w-screen-xl px-4 sm:px-2 md:px-8 space-y-12">
             <div className="flex flex-col xl:items-center xl:flex-row xl:space-x-8">
                 <div className="overflow-hidden rounded-lg mx-auto xl:w-2/5 shadow-lg">
-                    <Image src={img1} alt="profile" className="object-full"/>
+                    <CloudinaryImage publicId="/blog/pages/about1_d6upjk" width={600} height={600} alt="profile" className="object-full"/>
                 </div>
 
                 <div className="space-y-5 py-4 xl:w-3/5">
@@ -66,7 +66,7 @@ const ProfileBlock = () => {
                 </div>
 
                 <div className="overflow-hidden rounded-lg mx-auto  xl:w-2/5 shadow-lg">
-                    <Image src={img2} alt="profile" className="object-full"/>
+                    <CloudinaryImage publicId="/blog/pages/about2_kjotuv" width={600} height={600} alt="profile" className="object-full"/>
                 </div>
             </div>
         </div>

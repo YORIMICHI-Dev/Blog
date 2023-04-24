@@ -3,7 +3,7 @@ const meta = {
     slug: 'ubuntu-driver-install',
     date: '2023/04/17',
     excerpt: 'ユーザーのデバイスドライバが正しく設定されていない可能性があります。',
-    cover_image: '/images/posts/img3.jpg',
+    cover_image: '/blog/pages/404_a5lcee',
     parent_category: 'Tool',
     category: 'Ubuntu',
     author: 'YORIMICHI',

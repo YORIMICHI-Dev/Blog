@@ -1,3 +1,6 @@
+// 外部サイトのタイトル・説明・イメージを取得する
+
+
 import fetch from "node-fetch";
 import cheerio from "cheerio";
 
@@ -20,7 +23,7 @@ export async function getMetadata(url: string): Promise<EternalMetaData> {
 		// 説明を取得する
 		const description = $("meta[property='og:description']").attr("content") || $("meta[name='description']").attr("content") || null;
 
-		// Open Graphイメージを取得する
+		// イメージを取得する
 		const thumbnail = $("meta[property='og:image']").attr("content") || null;
 
 		return { title, description, thumbnail };

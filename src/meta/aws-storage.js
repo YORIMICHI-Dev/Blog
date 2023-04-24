@@ -3,7 +3,7 @@ const meta = {
     slug: 'aws-storage',
     date: '2023/04/18',
     excerpt: 'aws Could not install packages due to an OSError: [Errno 28] No space left on deviceが発生したため、容量を変更しました。',
-    cover_image: '/images/posts/img3.jpg',
+    cover_image: '/blog/pages/404_a5lcee',
     parent_category: 'Web',
     category: 'AWS',
     author: 'YORIMICHI',

@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
+import CloudinaryImage from "../molecules/CloudinaryImage";
 import { useState } from "react";
 import styles from "@/styles/hamburger.module.css"
-import images from "public/images/logo.png"
+
 
 const Header = () => {
 
@@ -23,7 +23,7 @@ const Header = () => {
                 <div className="flex items-center justify-between space-x-20 mt-3">
                     {/* Logo */}
                     <Link className="z-30" href={"/"}>
-                            <Image src={images} width={250} alt="logo" />
+                        <CloudinaryImage publicId="blog/pages/logo_ghfevf" width={250} height={50} alt="logo" />
                     </Link>
                     {/* Nav */}
                     <nav className="hidden items-center space-x-10 uppercase md:flex cursor-pointer">
