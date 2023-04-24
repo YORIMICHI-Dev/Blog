@@ -72,7 +72,7 @@ ubuntu@ip-10-0-0-233:~$ sudo systemctl status nginx
 
     location / {
         proxy_pass http://localhost:3000;
-        proxy_http_version 2;
+        proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
         proxy_set_header Host $host;
@@ -84,7 +84,7 @@ ubuntu@ip-10-0-0-233:~$ sudo systemctl status nginx
 <P>{"locationは指定されたリクエストURLに一致するHTTPリクエストを処理し、proxy_passでポート3000にリバースプロキシを行う。他はWebsocketの設定のため割愛する。"}</P>
 <P>{"作成した設定ファイルへのシンボリックリンクを/etc/nginx/sites-enabledディレクトリに作成する。作成しないと、nginxサーバーが起動できない。"}</P>
 <CodeView language={"bash"} filename={"link"}>{
-`sudo ln -s /etc/nginx/sites-available/yorimichi.com.conf /etc/nginx/sites-enabled/`
+`sudo ln -s /etc/nginx/sites-available/yorimichi-dev.com.conf /etc/nginx/sites-enabled/`
 }</CodeView>
 <P>{"設定後、Nginxの設定が間違えていないか構文をチェックする。"}</P>
 <CodeView language={"bash"} filename={"check"}>{
@@ -117,11 +117,14 @@ ubuntu@ip-10-0-0-233:~$ sudo systemctl status nginx
 <Ol>
 <Li num={"1"} title={"インストール"}>
 <CodeView language={"bash"} filename={"install"}>{
-`npm install -g pm2`
+`sudo npm install -g pm2`
 }</CodeView>
 </Li>
 <Li num={"2"} title={"設定ファイル作成"}>
 <P>{"続いてpm2を実行する際の設定ファイルをNext.jsプロジェクトのルートディレクトリにecosystem.config.jsとして作成する。"}</P>
+<CodeView language={"bash"} filename={"touch"}>{
+`touch ecosystem.config.js`
+}</CodeView>
 <CodeView language={"json"} filename={"ecosystem.config.js"}>{
 `module.exports = {
     apps: [

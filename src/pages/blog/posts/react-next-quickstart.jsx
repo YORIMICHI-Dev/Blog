@@ -26,11 +26,7 @@ sudo apt install -y build-essential curl`
 `curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt install -y nodejs`
 }</CodeView>
-<P>{"準備ができたらNodejsをインストールする。Nodejsは最新版のdpkパッケージをインストールする。"}</P>
-<CodeView language={"bash"} >{
-`curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt install -y nodejs`
-}</CodeView>
+
 
 <H3>{"バージョン管理をするためnパッケージをインストールする"}</H3>
 <P>{"続いてNodejsと、パッケージをインストールするnpmのバージョンを管理するnパッケージをインストールする。"}</P>
