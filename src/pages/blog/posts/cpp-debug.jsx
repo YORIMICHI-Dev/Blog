@@ -26,15 +26,18 @@ const cpp_debug = () => {
 <CodeView language="bash" filename="which gdb">{
 `$ which gdb`
 }</CodeView>
-<P>{"もしgdbがインストールされていなければ下記のコマンドからインストールしましょう。"}</P>
+<P>{"もしgdbがインストールされていなければ下記のコマンドからインストールします。"}</P>
 <CodeView language="bash" filename="install gdb">{
 `$ sudo apt install gdb`
 }</CodeView>
 </Li>
 <Li num={"2"} title="Visual Studio Codeでデバッグ準備">
 <P>{"Visual Studio Codeのlaunch.jsonにデバッグを設定します。"}</P>
-<P>{"はじめに、Ctrl + Shift + Pキーからコマンドパレットを開き、C/C++デバッグ構成の追加をクリックします。"}</P>    
-<P>{"続いて、(gdb)起動をクリックします。すると.vscodeディレクトリとlaunch.jsonが作成されます。"}</P>    
+<P>{"はじめに、Ctrl + Shift + Pキーからコマンドパレットを開き、C/C++デバッグ構成の追加をクリックします。"}</P>
+<ImageBlock imgSrc={"/blog/posts/cpp-debug1_q3jm7j"} />
+<P>{"続いて、(gdb)起動をクリックします。すると.vscodeディレクトリとlaunch.jsonが作成されます。"}</P> 
+<ImageBlock imgSrc={"/blog/posts/cpp-debug2_yvwp6a"} />
+<ImageBlock imgSrc={"/blog/posts/cpp-debug3_l0rxm8"} />
 </Li>
 <Li num={"3"} title="ソースファイルを -gオプション でデバッグ用にコンパイル">
 <P>{"作成したソースファイルを-gオプション を追加してデバッグ情報を追加してコンパイルします。デバッグを試すサンプルコードは以下です。"}</P>
@@ -67,7 +70,7 @@ int main(void) {
 <Li num={"4"} title="デバッグする実行ファイルを設定する">
 <P>{"コンパイルによって作成された sample.out 実行ファイルをデバッグします。"}</P>
 <P>{"作成した launch.json にデバッグしたい実行ファイルを紐付けます。変更するコードは'program'キーに実行ファイルのパスを設定するだけです。"}</P>
-<P>{"${workspaceFolder}は作業ディレクトリまでのディレクトリパスです。作業ディレクトリの下に実行ファイルを入力しましょう。"}</P>
+<P>{"${workspaceFolder}は作業ディレクトリまでのディレクトリパスです。作業ディレクトリの下に実行ファイルを入力します。"}</P>
 <CodeView language="json" filename="setting">{
 "'program': '${workspaceFolder}/sample.out',"
 }</CodeView> 
@@ -81,9 +84,11 @@ int main(void) {
 <Li num={"1"} title={"ブレイクポイントを設定する"}>
 <P>{"プログラムを確認するブレイクポイントを設定します。"}</P>
 <P>{"Visual Studio Codeではライン番号の横をクリックすると赤い点としてブレイクポイントが表示されます。"}</P>
+<ImageBlock imgSrc={"/blog/posts/cpp-debug4_lxunmo"} />
 </Li>
 <Li num={"2"} title="デバッグを実行">
 <P>{"実行とデバッグボタンをクリックし、(gdb)起動のボタンをクリックするとデバッグが開始します。またはF5をクリックします。"}</P>
+<ImageBlock imgSrc={"/blog/posts/cpp-debug5_zsv9yr"} />
 <Table columnName={["番号", "意味"]}
        values={[
         ["1", "デバッグスタート"],
@@ -97,7 +102,7 @@ int main(void) {
 <Li num={"3"} title="デバッグで変数を確認">
 <P>{"プログラムが進みにつれ変数の中身も変わっていきます。ブレイクポイント時点の変数の中身は左上の変数から確認できます。"}</P>
 <P>{"今回はnum1とnum2の変数に1と3が格納されます。"}</P>
-
+<ImageBlock imgSrc={"/blog/posts/cpp-debug6_jtjcs6"} />
 </Li>
 </Ol>
 
