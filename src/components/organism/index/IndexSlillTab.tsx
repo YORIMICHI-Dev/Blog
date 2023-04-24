@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import LinkPanel from "@/components/molecules/LinkPanel";
+import LinkPanelCloudinary from "@/components/molecules/LinkPanelCloudinary";
 import { PostMeta } from "@/utils/post";
 
 
@@ -85,13 +85,13 @@ const TabContent = ({ tabs, activeTab }: TabContentProps) => {
                         <div key={tab.label} className="flex flex-col py-5 md:flex-row md:space-x-7">
                             {/* Panel Image */}
                             <div className="flex justify-center overflow-hidden md:w-1/2 rounded-lg ">
-                            <LinkPanel href={`/blog/category/${tab.post.category.toLowerCase()}`}
-                                        imgSrc={tab.post.cover_image}
-                                        width={600}
-                                        height={450}
-                                        icon={tab.icon}
-                                        upperText={tab.panel}
-                                        lowerText={tab.parentCategory} />
+                            <LinkPanelCloudinary href={`/blog/category/${tab.post.category.toLowerCase()}`}
+                                                imgSrc={tab.post.cover_image}
+                                                width={400}
+                                                height={400}
+                                                icon={tab.icon}
+                                                upperText={tab.panel}
+                                                lowerText={tab.parentCategory} />
                             </div> 
 
                             {/* Panel Content */}
