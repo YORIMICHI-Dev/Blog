@@ -1,5 +1,5 @@
 // Components for Blog
-import {H2, H3, P, Ol, Li, Table, CodeView, CaseBlock, ConclusionBlock, ReferenceBlock} from "@/components/atoms/blog_components/BlogComponents"
+import {H2, H3, P, Ol, Li, Table, Key, Alert, CaseBlock, ImageBlock, CodeView, ConclusionBlock, ReferenceBlock} from "@/components/atoms/blog_components/BlogComponents"
 
 
 const spdlog = () => {
@@ -32,10 +32,13 @@ const spdlog = () => {
 `$ git clone https://github.com/gabime/spdlog.git`
 }</CodeView>
 <P>{"cloneしない場合は、レポジトリのzipファイルをダウンロードする"}</P>
+<ImageBlock imgSrc={"/blog/posts/cpp-spdlog1_gpwogy"} />
+<ImageBlock imgSrc={"/blog/posts/cpp-spdlog2_l8fexd"} />
 </Li>
 <Li num={"2"} title="includeディレクトリ内のspdlogディレクトリのみを開発ディレクトリに移動する">
 <P>{"ダウンロードしたディレクトリ内にあるincludeディレクトリ内のspdlog（ヘッダファイルオンリー）を開発ディレクトリに移動します。"}</P>
-<P>{"（clone・ダウンロード後のディレクトリ名もspdlogのため、別のディレクトリに保存します。）"}</P>    
+<P>{"（clone・ダウンロード後のディレクトリ名もspdlogのため、別のディレクトリに保存します。）"}</P>
+<ImageBlock imgSrc={"/blog/posts/cpp-spdlog3_uyoaez"} />
 </Li>
 <Li num={"3"} title={"動作確認"}>
 <P>{"spdlogを導入できたら動作を確認します。まずは、informationを表示します。"}</P>
@@ -45,7 +48,7 @@ const spdlog = () => {
 int main(void)
 {
     // informationを表示しよう
-    spdlog::info("infromaion!");
+    spdlog::info("information!");
 }`}</CodeView>
 </Li>
 </Ol>

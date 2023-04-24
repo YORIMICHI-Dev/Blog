@@ -1,6 +1,6 @@
 const meta = {
     title: 'spdlogを使ってC++でログを記録する',
-    slug: 'spdlog',
+    slug: 'cpp-spdlog',
     date: '2023/04/14',
     excerpt: '以前C++で開発していた時期にログを出力する方法を調査しました。',
     cover_image: '/blog/pages/404_a5lcee',
