@@ -3,7 +3,7 @@ const meta = {
     slug: 'react-next-quickstart',
     date: '2023/04/19',
     excerpt: 'React, Next.jsアプリ開発時の初期状態設定を実行するためのメモ書きです。',
-    cover_image: '/images/posts/img3.jpg',
+    cover_image: '/blog/pages/404_a5lcee',
     parent_category: 'Web',
     category: 'React/Next.js',
     author: 'YORIMICHI',

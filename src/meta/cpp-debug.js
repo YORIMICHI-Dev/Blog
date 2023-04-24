@@ -3,7 +3,7 @@ const meta = {
     slug: 'cpp-debug',
     date: '2023/04/17',
     excerpt: 'C++では不正なメモリにアクセスしたとき、コアダンプとしてプログラム途中で強制終了されるためデバッグします。',
-    cover_image: '/images/posts/img3.jpg',
+    cover_image: '/blog/pages/404_a5lcee',
     parent_category: 'Code',
     category: 'C++',
     author: 'YORIMICHI',

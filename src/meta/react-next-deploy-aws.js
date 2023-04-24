@@ -3,7 +3,7 @@ const meta = {
     slug: 'react-next-deploy-aws',
     date: '2023/04/19',
     excerpt: 'Next.jsで作成したブログをEC2上でデプロイしたときの方法をまとめました。',
-    cover_image: '/images/posts/img3.jpg',
+    cover_image: '/blog/pages/404_a5lcee',
     parent_category: 'Web',
     category: 'React/Next.js',
     author: 'YORIMICHI',

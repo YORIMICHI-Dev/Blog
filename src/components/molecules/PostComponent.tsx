@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CloudinaryImage from "./CloudinaryImage";
 import CategoryLabel from "./CategoryLabel";
 import { PostMeta } from "@/utils/post";
 
@@ -10,15 +11,13 @@ function PostComponent( { meta }: {meta: PostMeta} ) {
             <div className="space-y-2">
                 <div className="group rounded-lg object-fit overflow-hidden mb-4">
                     <Link href={`/blog/${meta.slug}`} className="relative group rounded-lg shadow-lg object-fit overflow-hidden">
-                        <Image src={meta.cover_image}
+                        <CloudinaryImage publicId={meta.cover_image}
                             alt="No Image"
                             height={600}
                             width={800}
-                            className="duration-300 group-hover:opacity-90 group-hover:scale-110" />            
+                            className="duration-300 group-hover:opacity-90 group-hover:scale-110" />
                     </Link>                
                 </div>
-
-
 
                 <div className="flex justify-between items-center">
                     <span className="font-light text-grayishBlue">

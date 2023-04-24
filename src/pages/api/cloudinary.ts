@@ -1,16 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getCloudinaryImageUrl, Options } from '@/utils/cloudinary';
 
-type Data = {
-  imageUrl: string;
-};
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse,
 ) {
   const publicId = req.query.publicId as string;
-  const options = req.query.options;
+  let options: Options = {};
 
   const imageUrl = getCloudinaryImageUrl(publicId, options);
 
