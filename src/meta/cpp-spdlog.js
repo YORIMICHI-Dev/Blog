@@ -3,7 +3,7 @@ const meta = {
     slug: 'cpp-spdlog',
     date: '2023/04/14',
     excerpt: '以前C++で開発していた時期にログを出力する方法を調査しました。',
-    cover_image: '/blog/pages/404_a5lcee',
+    cover_image: '/blog/thumbnail/cpp_ouw1jf',
     parent_category: 'Code',
     category: 'C++',
     author: 'YORIMICHI',
