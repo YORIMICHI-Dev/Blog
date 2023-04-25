@@ -87,7 +87,7 @@ const TabContent = ({ tabs, activeTab }: TabContentProps) => {
                             <div className="flex justify-center overflow-hidden md:w-1/2 rounded-lg ">
                             <LinkPanelCloudinary href={`/blog/category/${tab.post.category.toLowerCase()}`}
                                                 imgSrc={tab.post.cover_image}
-                                                width={400}
+                                                width={600}
                                                 height={400}
                                                 icon={tab.icon}
                                                 upperText={tab.panel}

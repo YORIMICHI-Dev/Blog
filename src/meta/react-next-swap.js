@@ -3,9 +3,9 @@ const meta = {
     slug: 'react-next-swap',
     date: '2023/04/24',
     excerpt: 'Next.jsビルド時にヒープ領域が足りなくなることがあったためスワップ領域を作成したり、ビルド時のメモリ使用量を制限したりした',
-    cover_image: '/blog/pages/404_a5lcee',
+    cover_image: '/blog/thumbnail/react-nextjs_ngierz',
     parent_category: 'Web',
-    category: 'React/Next.js',
+    category: 'React-Next.js',
     author: 'YORIMICHI',
     author_image: 'https://randomuser.me/api/portraits/men/12.jpg',
 }

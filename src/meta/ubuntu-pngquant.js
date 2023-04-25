@@ -3,7 +3,7 @@ const meta = {
     slug: 'ubuntu-pngquant',
     date: '2023/04/17',
     excerpt: 'pngファイルを圧縮する方法は様々あります。その中でも、コマンドだけですばやく圧縮する方法がpngquantです。',
-    cover_image: '/blog/pages/404_a5lcee',
+    cover_image: '/blog/thumbnail/ubuntu_y53mzm',
     parent_category: 'Tool',
     category: 'Ubuntu',
     author: 'YORIMICHI',
