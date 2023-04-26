@@ -12,9 +12,9 @@ const IndexWork = () => {
     return (
         <section id="work">
             {/* Title */}
-            <div className="flex flex-col items-center justify-center m-10 px-6">
-                <h2 className="mb-6 text-4xl font-semibold">My Work</h2>
-                <p className="max-w-md text-center text-grayishBlue">
+            <div className="flex flex-col items-center justify-center md:m-10 px-6">
+                <h2 className="mb-6 md:text-4xl text-3xl font-semibold">My Work</h2>
+                <p className="max-w-md md:text-xl text-center text-grayishBlue">
                     作成したサイトをアップロードしています< br/>
                     AWSでデプロイしています<br />
                 </p>

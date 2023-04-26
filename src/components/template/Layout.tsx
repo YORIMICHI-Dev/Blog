@@ -25,10 +25,10 @@ function Layout({ title = DEFAULT_TITLE, keywords = DEFAULT_KEYWORDS, descriptio
             <Head>
                 <title>{title}</title>
                 <meta charSet="utf-8" />
-                <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0" />
+                <meta name="viewport" content="width=device-width,initial-scale=1.0 ,minimum-scale=1.0" />
                 <meta name="keywords" content={keywords} />
                 <meta name="description" content={description} />
-                <link rel="icon" href="public/images/favicon.ico" />
+                <link rel="icon" href="images/favicon.ico" />
             </Head>
 
             <div className="flex flex-col h-screen justify-between min-w-max lg:overflow-x-hidden">

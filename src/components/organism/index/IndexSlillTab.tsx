@@ -56,11 +56,11 @@ const TabBar = ({ tabs, activeTab, onTabChange}: TabBarProps) => {
     return (
         <>
             {/* TabBar */}
-            <div className="flex items-center justify-center space-x-12">
+            <div className="flex items-center justify-center md:space-x-12">
                 {tabs.map((tab, index) => (
                 <div
                     key={index} 
-                    className={`flex flex-row p-4 space-x-2 text-xl cursor-pointer duration-300 hover:text-secondaryGreen 
+                    className={`flex flex-row p-4 space-x-2 md:text-xl text-base cursor-pointer duration-300 hover:text-secondaryGreen 
                             ${activeTab === index ? "font-semibold border-b-2 border-softGreen" : "text-gray-400"} transition-colors`}
                     onClick={() => onTabChange(index)}>
                     {tab.icon !== undefined && <FontAwesomeIcon icon={tab.icon} className="w-4" />}

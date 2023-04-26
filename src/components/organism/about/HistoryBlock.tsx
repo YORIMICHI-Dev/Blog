@@ -14,7 +14,7 @@ interface Histroy {
 const histories: Histroy[] = [
     {
         icon: faGraduationCap,
-        title: "出身校：電気通信大学大学院 修士",
+        title: "電気通信大学大学院 修士",
         period: "2017/04~2019/03",
         context: "塑性加工（曲げ加工）について研究",
         skill: "塑性加工, 有限要素法解析"
@@ -30,14 +30,14 @@ const histories: Histroy[] = [
         icon: faBriefcaseClock,
         title: "株式会社iPX",
         period: "2022/02~2023/02",
-        context: "受託開発、AGVシミュレーターの開発",
+        context: "AGVシミュレーターの開発",
         skill: "Python, C++, Ubuntu, 画像分類"
     },
     {
         icon: faBriefcaseClock,
-        title: "現在：ラニアケア株式会社",
+        title: "ラニアケア株式会社",
         period: "2023/03~",
-        context: "受託開発",
+        context: "Webアプリ受託開発・保守",
         skill: "Python, Django, Ubuntu, AWS, 画像分類"
     },
 ]
@@ -58,15 +58,15 @@ const HistoryBlock = () => {
                                         bg-secondaryGreen text-white relative z-10 title-font font-medium">
                             {index + 1}
                         </div>
-                        <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                        <div className="flex-grow md:pl-8 pl-6 flex items-center flex-col sm:flex-row">
                             <div className="flex-shrink-0 w-24 h-24 bg-green-100 rounded-full inline-flex items-center justify-center">
                                 <FontAwesomeIcon className="w-12 h-12 text-secondaryGreen" icon={history.icon} />
                             </div>
-                            <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                            <div className="flex-grow sm:pl-6 mt-6 sm:mt-0 space-y-2">
                                 <h2 className="font-medium title-font text-grayishBlue mb-1 text-sm">{history.period}</h2>
                                 <h2 className="font-medium title-font b-1 text-xl">{history.title}</h2>
-                                <p className="leading-relaxed text-grayishBlue">{history.context}</p>
-                                <p className="leading-relaxed text-grayishBlue">skill: {history.skill}</p>
+                                <p className="text-grayishBlue md:text-xl">{history.context}</p>
+                                <p className="text-grayishBlue text-sm">skill: {history.skill}</p>
                             </div>
                         </div>
                     </div>
