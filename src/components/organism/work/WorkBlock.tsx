@@ -55,7 +55,7 @@ const WorkBlock = () => {
                                     <div className="mb-6" >
                                         {work.description1.map((des, index) => {
                                             return (
-                                                <p key={index} className="text-grayishBlue sm:text-md leading-relaxed">{des}</p>
+                                                <p key={index} className="mb-2 text-grayishBlue md:text-lg leading-relaxed">{des}</p>
                                             )
                                         })}
                                     </div>
@@ -67,7 +67,7 @@ const WorkBlock = () => {
                                     <div className="mb-6" >
                                         {work.description2.map((des, index) => {
                                             return (
-                                                <p key={index} className="text-grayishBlue sm:text-md leading-relaxed">{des}</p>
+                                                <p key={index} className="mb-2 text-grayishBlue md:text-lg leading-relaxed">{des}</p>
                                             )
                                         })}
                                     </div>

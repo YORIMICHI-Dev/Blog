@@ -29,7 +29,7 @@ const ProfileBlock = () => {
                         <p className="text-center font-bold text-mainBrawn md:text-left">Experience</p>
                         <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl md:text-left">経験してきたこと</h2>                        
 
-                        <p className="mb-6 text-grayishBlue md:text-lg leading-relaxed">
+                        <p className="text-grayishBlue md:text-lg leading-relaxed">
                         大学院からはじめての社会人のときは機械系だったため金属ばかり相手をしていました。その頃はGコードを少し勉強したくらいで、プログラムはC言語を少し見たことあるかくらいでした。<br />
                         社会人3年目から少しやりたいことを探してみようと会社を辞め、色々と外の世界（国内）をブラブラしていました。途中なぜか簿記を勉強したり国道1号線走破したりしました。<br />
                         ブラブラしている途中にプログラムスクールに通い、そのままIT系に転職しました。<br />
@@ -45,7 +45,7 @@ const ProfileBlock = () => {
                         <p className="text-center font-bold text-mainBrawn md:text-left">My Blog</p>
                         <h1 className="mb-4 text-2xl font-bold text-black sm:text-2xl md:text-left">ブログについて</h1>                        
 
-                        <p className="mb-6 text-grayishBlue md:text-lg leading-relaxed">
+                        <p className="text-grayishBlue md:text-lg leading-relaxed">
                             私のブログはほとんど業務中に調べたり・教えていただいたコードだったり、知識をまとめています。だいたい別プロジェクトに移ると前の技術を忘れてしまうため、
                             備忘録として始めました。<br />
                             昔から何か創作物を作ってみたいと考えていましたが、不器用であまり長続きしませんでした。そんな中、ITに転職してからプログラミングを覚えたきっかけで、
