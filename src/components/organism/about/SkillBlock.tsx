@@ -8,7 +8,7 @@ const SkillBlock = () => {
 			<div className="grid justify-center xl:grid-cols-2">
 				{Skills.map((skill, index) => {
 					return (
-						<div key={index} className="flex flex-row space-x-5 pl-20 py-5 mr-auto">
+						<div key={index} className="flex md:flex-row flex-col md:items-start items-center space-x-5 py-5 md:pl-20 md:mr-auto">
 							<div className='flex items-center h-16 w-16 justify-center rounded-lg shadow-lg bg-thirdBrawn'>
 								<FontAwesomeIcon icon={skill.icon} className='h-8 w-8 bg-thirdBrawn' />		
 							</div>
@@ -18,14 +18,14 @@ const SkillBlock = () => {
 									<h3 className="mb-1 text-lg font-semibold md:text-xl">{skill.title}</h3>
 									{skill.detail.map((detail, index) => {
 										return (
-											<p key={index} className='text-grayishBlue'>{detail}</p>											
+											<p key={index} className='text-grayishBlue sm:text-md leading-relaxed'>{detail}</p>											
 										)
 									})}						
 								</div>
 								<div className='space-y-1'>
 									{skill.skill.map((skill, index) => {
 										return (
-											<p key={index} className='text-grayishBlue'>{skill}</p>
+											<p key={index} className='text-grayishBlue sm:text-md leading-relaxed'>{skill}</p>
 										)
 									})}
 								</div>

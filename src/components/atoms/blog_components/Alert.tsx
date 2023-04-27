@@ -9,7 +9,7 @@ interface AlertProps {
 
 const Alert = ({children, mark}: AlertProps) => {
     return (
-        <div className={`flex flex-row space-x-3 my-10 items-center p-3 rounded-xl border-2 ${mark === "check" ? "border-softGreen" : "border-softRed"}`}>
+        <div className={`flex flex-row space-x-3 md:my-10 my-5 items-center p-3 rounded-xl border-2 ${mark === "check" ? "border-softGreen" : "border-softRed"}`}>
             <div className="">
                 {mark === "check" ? <FontAwesomeIcon icon={faCheckCircle} className="w-6 text-softGreen" />
                                   : <FontAwesomeIcon icon={faInfoCircle} className="w-6 text-softRed" />}

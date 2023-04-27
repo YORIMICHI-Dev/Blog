@@ -26,28 +26,33 @@ function PostPage({meta, slug}: Props) {
     const Content = dynamic(() => import(`./posts/${slug}`))
     return (
         <LayoutWithSidebar title={meta.title}>
-            <div className="w-full lg:px-10 py-3 space-y-2 bg-white rounded-lg shadow-xl">
-                <Breadcrumb category={meta.category}/>
-                <div className="flex justify-between flex-col mx-auto items-baseline md:flex-row md:mb-0 space-y-5">
-                    <H1>{meta.title}</H1>
-                    <CategoryLabel>{meta.category}</CategoryLabel>
-                </div>
-                <div>
-                    {meta.date}
-                </div>
-                <div>
-                    <CloudinaryImage publicId={meta.cover_image} width={1800} height={600} alt='' className='rounded-3xl p-3' />                    
-                </div>
-
-                <div className="flex justify-between items-center bg-gray-100 p-2 my-8">
-                    <div className="flex items-center">
-                        <Image src={meta.author_image} width={40} height={40} alt="" className="mx-4 w-10 object-cover rounded-full hidden sm:block" />
-                        <h4>{meta.author}</h4>
+            <div className="w-full lg:px-10 py-3 ">
+                <div className="space-y-4">
+                    <Breadcrumb category={meta.category}/>
+                    <div className="flex justify-between flex-col mx-auto items-baseline md:flex-row md:mb-0">
+                        <H1>{meta.title}</H1>
                     </div>
-                </div>
+                    <div className="flex flex-row items-center justify-between">
+                        <div>
+                            {meta.date}                        
+                        </div>
+                        <CategoryLabel>{meta.category}</CategoryLabel>
+                    </div>
+                    <div>
+                        <CloudinaryImage publicId={meta.cover_image} width={1800} height={600} alt='' className='rounded-2xl shadow-xl' />                    
+                    </div>
+
+                    <div className="flex justify-between p-2 my-8">
+                        <div className="flex flex-row items-center">
+                            <Image src={meta.author_image} width={40} height={40} alt="" className="mx-4 w-10 object-cover rounded-full" />
+                            <h4>{meta.author}</h4>
+                        </div>
+                    </div>
                 <div className="">
                     <Content />
-                </div>
+                </div>                
+            </div>
+
             </div>
         </LayoutWithSidebar>
     );

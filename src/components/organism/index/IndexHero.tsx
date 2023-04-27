@@ -11,8 +11,8 @@ const IndexHero = () => {
             <div className="container flex flex-col-reverse my-auto mx-auto p-6 lg:flex-row">
                 {/* Content */}
                 <div className="flex flex-col items-center justify-center space-y-6 lg:space-y-10 xl:px-20 lg:w-1/2">
-                    <h1 className="mt-4 text-4xl font-semibold">YORIMICHI BLOG</h1>
-                    <p className="max-w-md mx-auto text-lg text-center text-grayishBlue lg:text-2xl lg:text-left lg:mt-0 lg:mx-0">
+                    <h1 className="mt-4 mb-6 md:text-4xl text-3xl  font-semibold">YORIMICHI BLOG</h1>
+                    <p className="max-w-md mx-auto md:text-2xl text-center text-grayishBlue text-md lg:text-left lg:mt-0 lg:mx-0">
                     Python・機械学習・Web系のブログ<br/>
                     色々発信していきたいです
                     </p>

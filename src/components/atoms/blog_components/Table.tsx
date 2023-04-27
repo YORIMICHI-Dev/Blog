@@ -5,7 +5,7 @@ interface Table {
 
 const Table = ({ columnName, values }: Table) => {
     return (
-        <div className="w-full p-6 bg-white rounded-lg my-14">
+        <div className="w-full p-6 bg-white rounded-lg md:my-14 my-8">
             <table className="w-full table-fixed border-collapse text-left">
                 <thead>
                     <tr>

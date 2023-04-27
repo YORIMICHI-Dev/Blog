@@ -12,11 +12,11 @@ const ProfileBlock = () => {
                 </div>
 
                 <div className="space-y-5 py-4 xl:w-3/5">
-                    <div>
+                    <div className="space-y-2 p-2">
                         <p className="text-center font-bold text-mainBrawn md:text-left">Who I am</p>
-                        <h2 className="mb-2 text-2xl font-bold text-black sm:text-2xl md:mb-4 md:text-left">はじめまして。YORIMICHIです。</h2>
+                        <h2 className="mb-4  text-2xl font-bold text-black sm:text-2xl md:text-left">はじめまして。YORIMICHIです。</h2>
 
-                        <p className="mb-6 text-grayishBlue sm:text-lg">
+                        <p className="mb-6 text-grayishBlue md:text-lg leading-relaxed">
                         YORIMICHIです。東京のIT会社で働いています。現在は結婚を機に中部地方からフルリモートです。<br />
                         小さい会社出身のため、SEとして要件定義から設計、実装、保守まで特にこだわりなく担当しています。 <br />
                         好きな言語（できる言語）はPythonです。Pythonしかほとんど書けません。<br />
@@ -25,11 +25,11 @@ const ProfileBlock = () => {
                         </p>
                     </div>
 
-                    <div>
+                    <div className="space-y-2 p-2">
                         <p className="text-center font-bold text-mainBrawn md:text-left">Experience</p>
-                        <h2 className="mb-2 text-xl font-semibold text-black sm:text-2xl md:mb-4 md:text-left">経験してきたこと</h2>                        
+                        <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl md:text-left">経験してきたこと</h2>                        
 
-                        <p className="mb-6 text-grayishBlue sm:text-lg ">
+                        <p className="text-grayishBlue md:text-lg leading-relaxed">
                         大学院からはじめての社会人のときは機械系だったため金属ばかり相手をしていました。その頃はGコードを少し勉強したくらいで、プログラムはC言語を少し見たことあるかくらいでした。<br />
                         社会人3年目から少しやりたいことを探してみようと会社を辞め、色々と外の世界（国内）をブラブラしていました。途中なぜか簿記を勉強したり国道1号線走破したりしました。<br />
                         ブラブラしている途中にプログラムスクールに通い、そのままIT系に転職しました。<br />
@@ -41,11 +41,11 @@ const ProfileBlock = () => {
 
             <div className="flex flex-col-reverse xl:items-center xl:flex-row xl:space-x-6">
                 <div className="space-y-5 py-4 xl:w-3/5">
-                    <div>
+                    <div className="space-y-2 p-2">
                         <p className="text-center font-bold text-mainBrawn md:text-left">My Blog</p>
-                        <h1 className="mb-2 text-2xl font-bold text-black sm:text-2xl md:mb-4 md:text-left">ブログについて</h1>                        
+                        <h1 className="mb-4 text-2xl font-bold text-black sm:text-2xl md:text-left">ブログについて</h1>                        
 
-                        <p className="mb-6 text-grayishBlue sm:text-lg md:mb-8">
+                        <p className="text-grayishBlue md:text-lg leading-relaxed">
                             私のブログはほとんど業務中に調べたり・教えていただいたコードだったり、知識をまとめています。だいたい別プロジェクトに移ると前の技術を忘れてしまうため、
                             備忘録として始めました。<br />
                             昔から何か創作物を作ってみたいと考えていましたが、不器用であまり長続きしませんでした。そんな中、ITに転職してからプログラミングを覚えたきっかけで、
@@ -54,11 +54,11 @@ const ProfileBlock = () => {
                         </p>
                     </div>
                     
-                    <div>
+                    <div className="space-y-2 p-2">
                         <p className="text-center font-bold text-mainBrawn md:text-left">Future</p>
-                        <h2 className="mb-2 text-xl font-semibold text-black sm:text-2xl md:mb-4 md:text-left">これから</h2>                        
+                        <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl md:text-left">これから</h2>                        
 
-                        <p className="mb-6 text-grayishBlue sm:text-lg md:mb-8">
+                        <p className="text-grayishBlue md:text-lg leading-relaxed">
                             Web系の技術を身につけることができたので、何か創作物を発信していければと思っています。<br />
                             ブログ作成を皮切りにNext jsとDjangoを使ったなにかアプリを作成したいです。
                         </p>

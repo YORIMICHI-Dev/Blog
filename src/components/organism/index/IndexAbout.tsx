@@ -27,9 +27,9 @@ const contents = [
 const IndexAbout = () => {
     return (
         <section id="about">
-            <div className="flex flex-col items-center justify-center m-10 px-6">
-                <h2 className="mb-6 text-4xl font-semibold">Profile and Skill</h2>
-                <p className="max-w-md text-center text-grayishBlue">
+            <div className="flex flex-col items-center justify-center md:m-10 px-6">
+                <h2 className="mb-6 md:text-4xl text-3xl font-semibold">Profile and Skill</h2>
+                <p className="max-w-md md:text-xl text-center text-grayishBlue">
                     プロフィールをまとめています< br/>
                     技術スタックはPython・機械学習がメインです<br />
                     最近はWeb系の保守もやっています

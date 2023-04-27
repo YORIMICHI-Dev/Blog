@@ -49,25 +49,25 @@ const WorkBlock = () => {
                             </div>
 
                             <div className="space-y-5 py-4 xl:w-3/5">
-                                <div>
+                                <div className="space-y-2 p-2">
                                     <p className="text-center font-bold text-mainBrawn md:text-left">{work.supplement1}</p>
-                                    <h2 className="mb-2 text-2xl font-bold text-black sm:text-2xl md:mb-4 md:text-left">{work.title1}</h2>
+                                    <h2 className="mb-4 text-2xl font-bold text-black sm:text-2xl md:text-left">{work.title1}</h2>
                                     <div className="mb-6" >
                                         {work.description1.map((des, index) => {
                                             return (
-                                                <p key={index} className="text-grayishBlue sm:text-lg">{des}</p>
+                                                <p key={index} className="mb-2 text-grayishBlue md:text-lg leading-relaxed">{des}</p>
                                             )
                                         })}
                                     </div>
                                 </div>
 
-                                <div>
+                                <div className="space-y-2 p-2">
                                     <p className="text-center font-bold text-mainBrawn md:text-left">{work.supplement2}</p>
-                                    <h2 className="mb-2 text-xl font-semibold text-black sm:text-2xl md:mb-4 md:text-left">{work.title2}</h2>                        
+                                    <h2 className="mb-4 text-xl font-semibold text-black sm:text-2xl md:text-left">{work.title2}</h2>                        
                                     <div className="mb-6" >
                                         {work.description2.map((des, index) => {
                                             return (
-                                                <p key={index} className="text-grayishBlue sm:text-lg">{des}</p>
+                                                <p key={index} className="mb-2 text-grayishBlue md:text-lg leading-relaxed">{des}</p>
                                             )
                                         })}
                                     </div>
