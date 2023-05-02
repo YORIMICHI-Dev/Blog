@@ -67,6 +67,7 @@ module.exports = {
       backgroundImage: {
         gradationBlue: 'radial-gradient(circle at center, hsl(231, 69%, 60%), hsl(231, 69%, 70%))',
         gradationGreen: 'radial-gradient(circle at center, hsl(120, 50%, 60%), hsl(120, 50%, 70%))',
+        gradationLightBrawn: 'radial-gradient(circle at center, #F1DEC9, #FFDECF)',
         gradationBrawn: 'radial-gradient(circle at center, #C8B6A6, #E1D4C8)',
         gradationBrawnToB: 'linear-gradient(to bottom, #C8B6A6, #E1D4C8)',
       },
