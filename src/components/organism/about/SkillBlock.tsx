@@ -10,7 +10,7 @@ const SkillBlock = () => {
 					return (
 						<div key={index} className="flex md:flex-row flex-col md:items-start items-center space-x-5 py-5 md:pl-20 md:mr-auto">
 							<div className='flex items-center h-16 w-16 justify-center rounded-lg shadow-lg bg-thirdBrawn'>
-								<FontAwesomeIcon icon={skill.icon} className='h-8 w-8 bg-thirdBrawn' />		
+								<FontAwesomeIcon icon={skill.icon} className='h-8 w-8 text-gray-700' />		
 							</div>
 
 							<div className='flex flex-col space-y-4 p-4'>

@@ -59,8 +59,8 @@ const HistoryBlock = () => {
                             {index + 1}
                         </div>
                         <div className="flex-grow md:pl-8 pl-6 flex items-center flex-col sm:flex-row">
-                            <div className="flex-shrink-0 w-24 h-24 bg-green-100 rounded-full inline-flex items-center justify-center">
-                                <FontAwesomeIcon className="w-12 h-12 text-secondaryGreen" icon={history.icon} />
+                            <div className="flex-shrink-0 w-20 h-20 bg-secondaryGreen rounded-full inline-flex items-center justify-center">
+                                <FontAwesomeIcon className="w-10 h-10 text-white" icon={history.icon} />
                             </div>
                             <div className="flex-grow sm:pl-6 mt-6 sm:mt-0 space-y-2">
                                 <h2 className="font-medium title-font text-grayishBlue mb-1 text-sm">{history.period}</h2>
