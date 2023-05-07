@@ -17,7 +17,7 @@ const CaseBlock = ({caseList}: Props) => {
     return (
         <>
             <div className="flex items-center justify-center my-14">
-                <div className="rounded-lg md:p-6 p-1">
+                <div className="rounded-lg md:p-6 p-1 w-full">
                     <div className="shadow-lg">
                         <div className="flex bg-gradationBlue items-center justify-between rounded-t-lg p-2 space-x-5">
                             <div className="bg-softYellow w-4 h-4 rounded-full"></div>

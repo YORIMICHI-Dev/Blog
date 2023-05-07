@@ -23,7 +23,7 @@ const Header = () => {
                 <div className="flex items-center justify-between space-x-20 mt-3">
                     {/* Logo */}
                     <Link className="z-30" href={"/"}>
-                        <CloudinaryImage publicId="blog/pages/logo_ghfevf" width={250} height={50} alt="logo" />
+                        <CloudinaryImage publicId="blog/icons/origin_dptiad" width={300} height={50} alt="logo" />
                     </Link>
                     {/* Nav */}
                     <nav className="hidden items-center space-x-10 uppercase md:flex cursor-pointer">

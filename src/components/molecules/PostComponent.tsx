@@ -38,11 +38,11 @@ function PostComponent( { meta }: {meta: PostMeta} ) {
                 <Link href={`/blog/${meta.slug}`} className='py-1 px-3 rounded-md bg-secondBrawn text-sm text-white border-2 border-secondBrawn duration-300 
                                                            hover:text-secondBrawn hover:bg-white font-semibold'>Read More</Link>
                 <div className="flex items-center space-x-2">
-                    <Image src={meta.author_image}
-                           width={40}
-                           height={40}
-                           alt=""
-                           className="object-cover rounded-full hidden sm:block" />
+                    <CloudinaryImage publicId={meta.author_image}
+                                     width={40}
+                                     height={40}
+                                     alt=""
+                                     className="object-cover rounded-full hidden sm:block" />
                     <h3 className="text-veryDarkBlue font-bold">{meta.author}</h3>
                 </div>
             </div>

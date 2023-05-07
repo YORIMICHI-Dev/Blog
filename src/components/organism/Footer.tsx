@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CloudinaryImage from "../molecules/CloudinaryImage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
@@ -8,7 +9,9 @@ const Footer = () => {
             <div className="mx-auto w-full px-16 py-10">
                 <div className="grid grid-cols-2 gap-12 md:grid-cols-4">
                     <div className="flex flex-col items-center justify-center text-xl gap-4">
-                        <Link href={"/"} className="">YORIMICHI</Link>
+                        <Link className="z-30" href={"/"}>
+                            <CloudinaryImage publicId="blog/icons/black_y1antj" width={250} height={50} alt="logo" />
+                        </Link>
                         <div className="flex flex-row space-x-4">
                             <Link href={process.env.NEXT_PUBLIC_GITHUB_URL}>
                                 <FontAwesomeIcon icon={faGithub} className="transition duration-300 w-6 text-md font-semibold hover:scale-110" />
