@@ -6,7 +6,7 @@ const TwitterWidgets = () => {
         <div className="rounded-lg shadow-md">
             <Timeline
                 dataSource={{ sourceType: "profile", screenName: "YORIMICHI_Dev" }}
-                options={{ lang: "jp", }}
+                options={{ lang: "jp", height: "600" }}
             />            
         </div>
 

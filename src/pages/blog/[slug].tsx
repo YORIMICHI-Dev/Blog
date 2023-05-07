@@ -2,7 +2,6 @@ import dynamic from "next/dynamic";
 import fs from "fs"
 import path from "path";
 
-import Image from "next/image";
 import CloudinaryImage from "@/components/molecules/CloudinaryImage";
 import LayoutWithSidebar from "@/components/template/LayoutWithSidebar";
 import CategoryLabel from "@/components/molecules/CategoryLabel";
