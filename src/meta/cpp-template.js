@@ -7,7 +7,7 @@ const meta = {
     parent_category: 'Code',
     category: 'C++',
     author: 'YORIMICHI',
-    author_image: 'https://randomuser.me/api/portraits/men/12.jpg',
+    author_image: '/blog/icons/icon_r30l8j',
 }
 
 export { meta };

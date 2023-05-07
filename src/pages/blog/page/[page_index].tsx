@@ -26,7 +26,7 @@ interface BlogPageProps {
 export default function BlogPage( {postsMeta, numPages, currentPage}: BlogPageProps ) {
 
     return (
-        <LayoutWithSidebar title="Blog Contents">
+        <LayoutWithSidebar title="Blog">
             <h1 className="text-5xl border-b-4 p-5 font-bold">Blog</h1>
 
             <FadeInOnVisible>

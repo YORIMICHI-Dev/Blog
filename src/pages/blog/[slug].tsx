@@ -2,7 +2,6 @@ import dynamic from "next/dynamic";
 import fs from "fs"
 import path from "path";
 
-import Image from "next/image";
 import CloudinaryImage from "@/components/molecules/CloudinaryImage";
 import LayoutWithSidebar from "@/components/template/LayoutWithSidebar";
 import CategoryLabel from "@/components/molecules/CategoryLabel";
@@ -44,7 +43,7 @@ function PostPage({meta, slug}: Props) {
 
                     <div className="flex justify-between p-2 my-8">
                         <div className="flex flex-row items-center">
-                            <Image src={meta.author_image} width={40} height={40} alt="" className="mx-4 w-10 object-cover rounded-full" />
+                            <CloudinaryImage publicId={meta.author_image} width={40} height={40} alt="" className="mx-4 w-10 object-cover rounded-full" />
                             <h4>{meta.author}</h4>
                         </div>
                     </div>

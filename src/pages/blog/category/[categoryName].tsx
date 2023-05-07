@@ -21,7 +21,7 @@ interface CategoryBlogPageProps {
 export default function CategoryBlogPage( {postsMeta, categoryName}: CategoryBlogPageProps) {
 
   return (
-    <LayoutWithSidebar title='Myblog'>
+    <LayoutWithSidebar title='Blog'>
       <h1 className="text-5xl border-b-4 p-5 font-bold">Category in {categoryName}</h1>
 
       <div className="grid md:grid-cols-2 gap-5">
@@ -73,10 +73,11 @@ export const getStaticProps = async (paths: PathProps) => {
 	// 同じカテゴリーのみ取得 カテゴリー名は元の名前を取得
 	let categoryNameOrigin = "";
 	const categoryMeta: PostMeta[] = postsMeta.filter((meta) => {
-		if (categoryNameOrigin === "") {
+		if (meta.category.toLowerCase() === categoryName) {
 			categoryNameOrigin = meta.category
+			return true
 		}
-	  	return meta.category.toLowerCase() === categoryName;
+	  	return false;
 	});
 
 

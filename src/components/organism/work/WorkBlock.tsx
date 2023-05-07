@@ -8,7 +8,7 @@ const Works = [
     {
         id: "myBlog",
         href: "/",
-        imgSrc: "/blog/pages/work1_vbyiru",
+        imgSrc: "/blog/pages/work1_ngiwkj",
         icon: faWandMagicSparkles,
         upperText: "MyBlogSite",
         lowerText: "Skill: Next.js, TypeScript, Tailwind, AWS",

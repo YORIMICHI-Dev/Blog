@@ -40,7 +40,7 @@ next-env.d.ts
 *.png
 *.jpg
 *.jpeg
-*.ico
+# *.ico
 
 # vscode
 *.vscode

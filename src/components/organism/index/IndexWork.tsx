@@ -23,7 +23,7 @@ const IndexWork = () => {
             <div className="grid gap-4 px-4 md:grid-cols-3">
                 {/* Image 1 */}
                 <LinkPanelCloudinary href={"work/#myBlog"} 
-                           imgSrc={"/blog/pages/work1_vbyiru"}
+                           imgSrc={"/blog/pages/work1_ngiwkj"}
                            width={600}
                            height={600}
                            icon={faWandMagicSparkles} 
