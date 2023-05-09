@@ -121,7 +121,7 @@ const Skills = [
 		],
 		skill: [
 			"基礎情報技術者",
-			"AWS Certified Cloud Practitioner",
+			"AWS (SAA-C03, CLF)",
 			"Java Silver",
 		],
 	},
