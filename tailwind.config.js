@@ -55,7 +55,7 @@ module.exports = {
 
         // Tag Color
         python: "hsl(50, 100%, 35%)",
-        typeScript: "hsl(206, 65%, 45%)",
+        typescript: "hsl(206, 65%, 45%)",
         react: "hsl(195, 100%, 60%)",
         cpp: "hsl(216, 100%, 30%)",
         machineLearning: "hsl(30, 100%, 60%)",

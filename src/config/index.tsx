@@ -2,7 +2,6 @@ import { FaPython, FaReact, FaUbuntu, FaCloud} from "react-icons/fa";
 import { SiCodereview, SiTypescript } from "react-icons/si";
 import { DiVisualstudio } from "react-icons/di";
 import { TbBrandCpp } from "react-icons/tb";
-import { AiTwotoneTool } from "react-icons/ai";
 import { ReactNode } from "react";
 
 
