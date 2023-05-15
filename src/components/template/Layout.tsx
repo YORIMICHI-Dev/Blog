@@ -9,17 +9,20 @@ interface LayoutProps {
     title: string
     keywords?: string
     description?: string
+    type?: string
+    url?: string
+    image_url?: string
     children: ReactNode
 }
 
-const DEFAULT_TITLE = "Home"
 const DEFAULT_KEYWORDS = "development, coding, programming"
 const DEFAULT_DESCRIPTION = "My blog is now developed"
+const DEFAULT_TYPE = "website"
 
-function Layout({ title = DEFAULT_TITLE, keywords = DEFAULT_KEYWORDS, description = DEFAULT_DESCRIPTION, children }: LayoutProps) {
-        
+function Layout ({ title, keywords = DEFAULT_KEYWORDS, description = DEFAULT_DESCRIPTION, type = DEFAULT_TYPE, children }: LayoutProps) {
+    
     title += " | YORIMICHI"
-
+    
     return (
         <div>
             <Head>
@@ -28,8 +31,14 @@ function Layout({ title = DEFAULT_TITLE, keywords = DEFAULT_KEYWORDS, descriptio
                 <meta name="viewport" content="width=device-width,initial-scale=1.0 ,minimum-scale=1.0" />
                 <meta name="keywords" content={keywords} />
                 <meta name="description" content={description} />
+
+                <meta property="og:title" content={title} />
+                <meta property="og:type" content={type} />
+                <meta property="og:url" content="ページのURL(絶対パス)" />
+                <meta property="og:image" content="画像のURL(絶対パス)" />
                 <link rel="icon" href="images/favicon.ico" />
             </Head>
+
 
             <div className="flex flex-col h-screen justify-between min-w-max lg:overflow-x-hidden">
                 <Header />

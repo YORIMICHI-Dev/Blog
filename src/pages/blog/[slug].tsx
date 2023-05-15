@@ -24,7 +24,7 @@ type PathProps = {
 function PostPage({meta, slug}: Props) {
     const Content = dynamic(() => import(`./posts/${slug}`))
     return (
-        <LayoutWithSidebar title={meta.title}>
+        <LayoutWithSidebar title={meta.title} type={"article"}>
             <div className="w-full lg:px-10 py-3 ">
                 <div className="space-y-4">
                     <Breadcrumb category={meta.category}/>
