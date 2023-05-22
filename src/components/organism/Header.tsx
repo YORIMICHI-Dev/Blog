@@ -35,7 +35,7 @@ const Header = () => {
                             <span className="inline-block">About</span>
                             <span className="absolute h-[2px] bg-mainBrawn left-0 -bottom-3 w-0 group-hover:w-full transition-all duration-300"></span>
                         </Link>
-                        <Link className="tracking-widest  duration-300 hover:text-mainBrawn relative group" href={"/contact"}>
+                        <Link className="tracking-widest  duration-300 hover:text-mainBrawn relative group" href={process.env.NEXT_PUBLIC_TWITTER_URL}>
                             <span className="inline-block">Contact</span>
                             <span className="absolute h-[2px] bg-mainBrawn left-0 -bottom-3 w-0 group-hover:w-full transition-all duration-300"></span>
                         </Link>
