@@ -43,9 +43,6 @@ $ pngquant *.png *.png`}</CodeView>
 </Li>
 </Ol>
 
-<H3>{"圧縮したpngファイルサイズの比較"}</H3>
-<P>{"pngquantにて圧縮した画像を並べてみました。約64%ファイルサイズが圧縮されても見た目はほとんどかわりません。"}</P>
-{/* 画像 */}
 
 <H3>{"オプション一覧"}</H3>
 <Table columnName={["オプション", "結果"]}
@@ -71,7 +68,6 @@ pngquant *.png --force`}</CodeView>
 <CodeView language="bash" filename="pngquant install">{
 `# Floyd-Steinberg ditheringアルゴリズムを使用しない
 pngquant *.png --nofs`}</CodeView>
-{/* 画像 */}
 
 
 <H2>{"まとめ"}</H2>
