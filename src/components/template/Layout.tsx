@@ -40,7 +40,7 @@ function Layout ({ title, keywords = DEFAULT_KEYWORDS, description = DEFAULT_DES
             </Head>
 
 
-            <div className="flex flex-col h-screen justify-between min-w-max lg:overflow-x-hidden">
+            <div className="flex flex-col h-screen justify-between">
                 <Header />
 
                 <Main >{children}</Main>
