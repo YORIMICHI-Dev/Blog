@@ -21,11 +21,11 @@ const cpp_debug = () => {
 <P>{"はじめにdockerをインストールするため必要なパッケージをインストールする。"}</P>
 <CodeView language={"bash"} filename={"package"}>{
 `sudo apt-get update
-sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg \
+sudo apt-get install \\
+    apt-transport-https \\
+    ca-certificates \\
+    curl \\
+    gnupg \\
     lsb-release`
 }</CodeView>
 <P>{"次に、Dockerの公式GPGキーを追加する。"}</P>
@@ -150,27 +150,27 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt install -y tzdata
 
 # パッケージのインストール
-RUN apt install -y \
-    curl \
-    nano \
-    git \
+RUN apt install -y \\
+    curl \\
+    nano \\
+    git \\
     build-essential
 
-RUN apt install -y \
-    libbz2-dev \
-    libffi-dev \
-    liblzma-dev \
-    libncursesw5-dev \
-    libreadline-dev \
-    libsqlite3-dev \
-    libssl-dev \
-    libxml2-dev \
-    libxmlsec1-dev \
-    llvm \
-    make \
-    tk-dev \
-    wget \
-    xz-utils \
+RUN apt install -y \\
+    libbz2-dev \\
+    libffi-dev \\
+    liblzma-dev \\
+    libncursesw5-dev \\
+    libreadline-dev \\
+    libsqlite3-dev \\
+    libssl-dev \\
+    libxml2-dev \\
+    libxmlsec1-dev \\
+    llvm \\
+    make \\
+    tk-dev \\
+    wget \\
+    xz-utils \\
     zlib1g-dev
 
 # pyenvをインストール
@@ -180,7 +180,7 @@ RUN curl https://pyenv.run | bash
 ENV PYENV_ROOT /root/.pyenv
 ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 
-# Pythonのバージョンを設定し、インストール
+# Pythonのバージョンを設定しインストール
 ENV PYTHON_VERSION 3.10
 RUN pyenv install $PYTHON_VERSION
 RUN pyenv global $PYTHON_VERSION
