@@ -62,6 +62,7 @@ module.exports = {
         ubuntu: "hsl(356, 100%, 50%)",
         aws: "hsl(340, 100%, 55%)",
         vscode: "hsl(200, 100%, 40%)",
+        docker: "hsl(200, 100%, 40%)",
         review: "hsl(146, 70%, 45%)",
       },
       backgroundImage: {

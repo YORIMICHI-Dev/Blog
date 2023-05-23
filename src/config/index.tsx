@@ -1,4 +1,4 @@
-import { FaPython, FaReact, FaUbuntu, FaCloud} from "react-icons/fa";
+import { FaPython, FaReact, FaUbuntu, FaCloud, FaDocker} from "react-icons/fa";
 import { SiCodereview, SiTypescript } from "react-icons/si";
 import { DiVisualstudio } from "react-icons/di";
 import { TbBrandCpp } from "react-icons/tb";
@@ -9,9 +9,9 @@ export const POST_PER_PAGE: number = 6
 
 
 export const PARENT_CATEGORY = {
-    "Code": ["Python", "TypeScript", "MachineLearning"],
-    "WebApp": ["React-Next.js", "Django", "AWS"],
-    "Tools": ["Ubuntu", "VSCode"],
+    "Code": ["Python", "TypeScript"],
+    "WebApp": ["React-Next.js", "AWS"],
+    "Tools": ["Ubuntu", "VSCode", "Docker"],
     "Column": ["Review",]
 }
 
@@ -24,6 +24,7 @@ export const CATEGORIES: string[] = [
     "Ubuntu",
     "AWS",
     "VSCode",
+    "Docker",
     "Review",
 ]
 
@@ -41,6 +42,7 @@ export const CATEGORIES_COLOR: CategoryColor = {
     "Ubuntu": "bg-ubuntu",
     "AWS": "bg-aws",
     "VSCode": "bg-vscode",
+    "Docker": "bg-docker",    
     "Review": "bg-review",
 }
 
@@ -58,6 +60,7 @@ export const CATEGORIES_ICON: CategoryIcon = {
     "Ubuntu": <FaUbuntu />,
     "VSCode": <DiVisualstudio />,
     "AWS": <FaCloud />,
-    "Review": <SiCodereview />
+    "Docker": <FaDocker />,
+    "Review": <SiCodereview />,
 }
 
