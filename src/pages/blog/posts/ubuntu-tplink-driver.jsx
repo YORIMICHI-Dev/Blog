@@ -9,7 +9,7 @@ const cpp_debug = () => {
 
 <H2>{"ATP-Link ArcherのWifiドライバをUbuntuにインストールする"}</H2>
 <CaseBlock caseList={[
-    {caseString:"UbuntuにTP-Link Archerの毎回ドライバを入れたいとき。", check:true,},
+    {caseString:"UbuntuにTP-Link Archerドライバを入れたいとき。", check:true,},
 ]} />
 <P>{"Linux（Ubuntu）でTP-Link ArcherのWifiアダプターを使用するときのメモです。"}</P>
 <P>{"Ubuntuを再インストールする際にTP-Link Archerの毎回ドライバを入れる方法を調査していたためまとめました。"}</P>
