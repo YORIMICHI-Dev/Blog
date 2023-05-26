@@ -20,17 +20,25 @@ const CodeView = ( props: { language: string, filename?: string, children?: Reac
 
     return (
         <div className='relative my-4 p-2'>
+            {/* code view */}
             <SyntaxHighlighter language={props.language}
                                style={dracula}
                                customStyle={{
                                    borderRadius: "12px",
                                    width: "100%",
                                    fontSize: "18px",
-                                   padding: "2em",
+                                   padding: "3em 2em 2em 2em",
                                }}
                                showLineNumbers>
                 {props.children as string}
             </SyntaxHighlighter>
+
+            {/* rounded ball */}
+            <div className='absolute bg-softRed h-3 w-3 rounded-full left-8 top-8'></div>
+            <div className='absolute bg-softYellow h-3 w-3 rounded-full left-8 top-8 translate-x-5'></div>
+            <div className='absolute bg-softGreen h-3 w-3 rounded-full left-8 top-8 translate-x-10'></div>
+
+            {/* copy board */}
             <div className='absolute flex flex-row items-center space-x-3 right-6 top-6'>
                 {props.filename && (
                     <div className="hidden md:block text-sm  text-white text-right">
@@ -44,7 +52,6 @@ const CodeView = ( props: { language: string, filename?: string, children?: Reac
                                     onClick={clickCopyCode}/>                
                 </div>
             </div>
-
         </div>
     )
 };

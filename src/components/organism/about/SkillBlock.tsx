@@ -67,7 +67,7 @@ const Skills = [
 			"書きやすいような書きにくいような"
 		],
 		skill: [
-			"Django",
+			"fastapi / Django",
 			"React / Nodejs / Next.js",
 			"HTML / CSS (Tailwind)"
 		],

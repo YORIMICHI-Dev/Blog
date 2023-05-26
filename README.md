@@ -1,7 +1,5 @@
-## Blogについて
-Next.js, React, Tailwindを使用してブログサイトを作成しました。
-一応ライセンス設定していますが、改変や再配布などは自由です。
-もし使えそうな部品があり使っていただければ嬉しいです。
+## サイトについて
+Next.js, React, Tailwindを使用してサイトを作成しました。
 
 ## 開発環境
 <ul>
@@ -13,6 +11,11 @@ Next.js, React, Tailwindを使用してブログサイトを作成しました�
 </ul>
 
 ## スタート方法
+モジュールのインストール
+<code>
+npm install
+</code>
+
 デバックで起動
 <code>
 npm run dev
