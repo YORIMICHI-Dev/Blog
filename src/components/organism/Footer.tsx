@@ -39,7 +39,8 @@ const Footer = () => {
 
                     <nav className="flex flex-col items-center space-y-4">
                         <Link href={"/work"} className="text-lg font-bold uppercase tracking-widest duration-300 hover:scale-110">Work</Link>
-                        <Link href={"/work/#my_blog"} className="text-md transition duration-300 hover:translate-x-3 ">My Blog</Link>
+                        <Link href={"/work/#myBlog"} className="text-md transition duration-300 hover:translate-x-3 ">My Blog</Link>
+                        <Link href={"/work/#chatApp"} className="text-md transition duration-300 hover:translate-x-3 ">Chat App</Link>
                     </nav>
                 </div>
             </div>
