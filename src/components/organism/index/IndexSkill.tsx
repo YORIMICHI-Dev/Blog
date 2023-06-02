@@ -65,10 +65,6 @@ const IndexSkill = ({posts}: Props) => {
             {/* Tabs/Panels Container */}
             <div className="flex flex-col items-center justify-center md:m-10 lg:px-6 px-2">
                 <h2 className="mb-6 md:text-4xl text-3xl font-semibold">Blog Content</h2>
-                <p className="min-w-md md:text-xl text-center text-grayishBlue">
-                    ブログ内容をまとめています< br/>
-                    ブログは不定期ですが月に3件くらいは書いていきたいです
-                </p>
             </div>
             <IndexSkillTab tabs={tabs} />
         </section>
