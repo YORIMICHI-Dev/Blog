@@ -4,7 +4,6 @@ import ProfileBlock from "@/components/organism/about/ProfileBlock";
 import SkillBlock from "@/components/organism/about/SkillBlock";
 import HistoryBlock from "@/components/organism/about/HistoryBlock";
 import PageH1 from "@/components/atoms/PageH1";
-import PageH2 from "@/components/atoms/PageH2";
 
 function about() {
 
@@ -17,7 +16,7 @@ function about() {
                 {/* プロフィール */}
                 <FadeInOnVisible>
                     <section id="profile" className="shadow-md pb-20 rounded-lg">
-                        <PageH2>Profile</PageH2>
+                        <h2 className="mb-6 md:text-4xl text-3xl font-semibold">Profile</h2>
                         <ProfileBlock />                
                     </section>
                 </FadeInOnVisible>
@@ -25,7 +24,7 @@ function about() {
                 {/* スキル */}
                 <FadeInOnVisible>
                     <section id="skill" className="shadow-md py-20  rounded-lg">
-                        <PageH2>Skill</PageH2>
+                        <h2 className="mb-6 md:text-4xl text-3xl font-semibold">Skill</h2>
                         <SkillBlock />     
                     </section>                    
                 </FadeInOnVisible>
@@ -35,7 +34,7 @@ function about() {
 
                 <FadeInOnVisible>
                     <section id="history" className="shadow-md py-20  rounded-lg">
-                        <PageH2>History</PageH2>
+                        <h2 className="mb-6 md:text-4xl text-3xl font-semibold">History</h2>
                         <HistoryBlock />
                     </section>                    
                 </FadeInOnVisible>
