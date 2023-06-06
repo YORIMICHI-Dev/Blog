@@ -52,9 +52,11 @@ const ReferenceBlock = ({ href }: Props) => {
                             }                    
                         </div>
                         <div className="flex flex-col space-y-4 w-4/5">
-                            <span className="md:text-xl font-semibold">Title: {metadata.title}</span>
+                            <span className="md:text-xl font-semibold">
+                                Title: {metadata.title && metadata.title.length > 100 ? `${metadata.title.substring(0, 100)}...` : metadata.title}
+                            </span>
                             <div className="hidden md:block">
-                                <span className="">{metadata.description}</span>                                
+                            {metadata.description && metadata.description.length > 100 ? `${metadata.description.substring(0, 100)}...` : metadata.description}                    
                             </div>
                         </div>
                         <div className="absolute flex flex-row space-x-3 -top-3 left-0 text-center font-semibold text-white bg-secondBrawn px-2 py-1 rounded-lg">
