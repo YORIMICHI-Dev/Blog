@@ -67,17 +67,25 @@ import multiprocessing
 workers = multiprocessing.cpu_count() * 2 + 1
 worker_class = "uvicorn.workers.UvicornWorker"
 bind = "0.0.0.0:8000"
-daemon = True`
+daemon = True
+
+# ログ設定
+accesslog = "./log/access.log"
+errorlog = "./log/error.log"
+loglevel = "info" # ログレベル ('debug', 'info', 'warning', 'error', 'critical')`
 }</CodeView>
 <P>{"主な設定内容は以下。"}</P>
 <Table columnName={["引数", "意味", "デフォルト"]}
        values={[
         ["workers", "ワーカープロセスの数を指定、一般的にはシステムのCPUコア数の2倍+1が推奨される", "1"],
         ["worker_class", "使用するワーカータイプ、デフォルトは同期ワーカー", "'sync'"],
-        ["bind", "サーバーが待ち受けるネットワークインターフェースとポート", "127.0.0.1:8000"],
+        ["bind", "サーバーが待ち受けるネットワークインターフェースとポート", "'127.0.0.1:8000'"],
         ["daemon", "ログレベルを表示", "False"],
         ["timeout", "ワーカーがリクエストを処理するのにかけられる最大時間（秒）", "30"],
         ["reload", "コードの変更を自動的に検知してサーバーをリロードするかどうかを指定", "False"],
+        ["accesslog", "アクセスログの出力先、デフォルトは標準出力（-）", "'-'"],
+        ["errorlog", "エラーログの出力先、デフォルトは標準出力（-）", "'-'"],
+        ["loglevel", "ログレベル('debug', 'info', 'warning', 'error', 'critical')", "'info'"],
         ]}/>
 <ReferenceBlock href={"https://docs.gunicorn.org/en/latest/settings.html#config-file"}/>
 
