@@ -1,7 +1,5 @@
 // 外部サイトのタイトル・説明・イメージを取得する
 
-
-import fetch from "node-fetch";
 import cheerio from "cheerio";
 
 export interface EternalMetaData {

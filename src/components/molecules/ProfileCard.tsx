@@ -16,11 +16,11 @@ const ProfileCard = () => {
                 </div>
             </div>
 
-            <div className="flex flex-col py-5 space-y-10 items-center">
+            <div className="flex flex-col px-2 py-5 items-center">
                 <p className="">
-                    機械学習エンジニアです。<br/>
+                    バックエンドエンジニアです。<br/>
                     メインはPythonですが、<br />
-                    Web系の技術も勉強中です。
+                    フロントエンド・AWSなどWeb系全般的に勉強中です。
                 </p>
             </div>
 
