@@ -1,15 +1,14 @@
 import { FaPython, FaReact, FaUbuntu, FaCloud, FaDocker} from "react-icons/fa";
 import { SiCodereview, SiTypescript } from "react-icons/si";
 import { DiVisualstudio } from "react-icons/di";
-import { TbBrandCpp } from "react-icons/tb";
+import { TbBrandCpp, TbBrandGolang } from "react-icons/tb";
 import { ReactNode } from "react";
-
 
 export const POST_PER_PAGE: number = 6
 
 
 export const PARENT_CATEGORY = {
-    "Code": ["Python", "TypeScript"],
+    "Code": ["Python", "TypeScript", "Go"],
     "WebApp": ["React-Next.js", "AWS"],
     "Tools": ["Ubuntu", "VSCode", "Docker"],
     "Column": ["Review",]
@@ -19,6 +18,7 @@ export const PARENT_CATEGORY = {
 export const CATEGORIES: string[] = [
     "Python",
     "TypeScript",
+    "Go",
     "React-Next.js",
     "C++",
     "Ubuntu",
@@ -37,6 +37,7 @@ interface CategoryColor {
 export const CATEGORIES_COLOR: CategoryColor = {
     "Python": "bg-python",
     "TypeScript": "bg-typescript",
+    "Go": "bg-go",
     "React-Next.js": "bg-react",
     "C++": "bg-cpp",
     "Ubuntu": "bg-ubuntu",
@@ -55,6 +56,7 @@ interface CategoryIcon {
 export const CATEGORIES_ICON: CategoryIcon = {
     "Python": <FaPython />,
     "TypeScript": <SiTypescript />,
+    "Go": <TbBrandGolang />,
     "React-Next.js": <FaReact />,
     "C++": <TbBrandCpp />,
     "Ubuntu": <FaUbuntu />,
