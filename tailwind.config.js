@@ -58,7 +58,7 @@ module.exports = {
         typescript: "hsl(206, 65%, 45%)",
         react: "hsl(195, 100%, 60%)",
         cpp: "hsl(216, 100%, 30%)",
-        go: "hsl(30, 100%, 60%)",
+        golang: "hsl(30, 100%, 60%)",
         ubuntu: "hsl(356, 100%, 50%)",
         aws: "hsl(340, 100%, 55%)",
         vscode: "hsl(200, 100%, 40%)",

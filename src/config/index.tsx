@@ -37,7 +37,7 @@ interface CategoryColor {
 export const CATEGORIES_COLOR: CategoryColor = {
     "Python": "bg-python",
     "TypeScript": "bg-typescript",
-    "Go": "bg-go",
+    "Go": "bg-golang",
     "React-Next.js": "bg-react",
     "C++": "bg-cpp",
     "Ubuntu": "bg-ubuntu",
