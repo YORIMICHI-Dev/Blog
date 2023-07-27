@@ -21,21 +21,21 @@ const histories: Histroy[] = [
     },
     {
         icon: faIndustry,
-        title: "住友電気工業株式会社",
-        period: "2019/04~2021/08",
+        title: "メーカ勤務",
+        period: "2019/04~2022/12",
         context: "研削加工工具の開発・生産技術",
-        skill: "研削加工, 電気めっき"
+        skill: "研削工具, Python, データ整理"
     },
     {
         icon: faBriefcaseClock,
-        title: "株式会社iPX",
+        title: "受託開発・AGVシミュレーター開発",
         period: "2022/02~2023/02",
         context: "AGVシミュレーターの開発",
         skill: "Python, C++, Ubuntu, 画像分類"
     },
     {
         icon: faBriefcaseClock,
-        title: "ラニアケア株式会社",
+        title: "Web受託開発・バックエンド",
         period: "2023/03~",
         context: "Webアプリ受託開発・保守",
         skill: "Python, Django, Ubuntu, AWS, 画像分類"

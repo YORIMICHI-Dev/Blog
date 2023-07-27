@@ -15,7 +15,7 @@ const cpp_debug = () => {
 <P>{"GunicornでFastAPIを立ち上げる方法を調査したためメモ。"}</P>
 
 
-<H2>{"Gunicornとuvicornの違い"}</H2>
+<H2>{"GunicornとUvicornの違い"}</H2>
 <H3>{"Gunicornの概要"}</H3>
 <P>{"Gunicorn（「Green Unicorn」の略）は、PythonのWSGI（Web Server Gateway Interface）HTTPサーバーである。"}</P>
 <P>{"WSGIは、PythonでWebアプリケーションとWebサーバー間の通信を規定するための標準規格で、PEP 3333で定められており、リクエストとレスポンスを同期的に処理するため、同一時間に一つのリクエストだけを処理できる。そのため、複数のリクエストを並行して処理する必要がないアプリや、リソースが限られた環境で使用する。"}</P>
@@ -28,9 +28,9 @@ const cpp_debug = () => {
 
 <H3>{"GunicornとUvicornの違い"}</H3>
 <P>{"主な違いは、GunicornがWSGIアプリケーション用で、UvicornがASGIアプリケーション用である。つまり、Webフレームワークが同期的ならGunicornを、非同期的ならUvicornを使用する。"}</P>
-<P>{"GunicornとUvicornは一緒に使うことができ、Gunicornのプロセス管理機能を使用しながらUvicornの高速なASGIサーバー機能を組み合わせることができる。"}</P>
+<P>{"しかし、Gunicornのプロセス管理機能を使用しながらUvicornの高速なASGIサーバー機能を組み合わせることができる。GunicornによるUvicornを実行した設定方法をまとめる。"}</P>
 
-<H2>{"GunicornでFastAPIを立ち上げる"}</H2>
+<H2>{"ASGI(Uvicorn)設定を追加したGunicornでFastAPIを立ち上げる"}</H2>
 <H3>{"Gunicornのインストール"}</H3>
 <P>{"FastAPIを立ち上げるために必要なライブラリをインストールする。最低限必要なライブラリは、FastAPI, Uvicorn, Gunicornである。"}</P>
 <CodeView language="bash" filename="install">{
@@ -60,6 +60,7 @@ def root() -> dict[str, str]:
 
 <H3>{"Gunicornの設定ファイルgunicorn.config.pyの作成"}</H3>
 <P>{"Gunicornの設定ファイルを作成する。主に、CPUのコア数、ASGI（Uvicorn）の設定、ポートの設定、デーモン化を設定する。"}</P>
+<P>{"ここでUvicornにより起動を実行するため、worker_classにuvicornのワーカーをセッティングする。"}</P>
 <CodeView language="python" filename="guniconr.config.py">{
 `"""gunicorn settings"""
 import multiprocessing
