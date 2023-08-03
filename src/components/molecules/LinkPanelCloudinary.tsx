@@ -25,7 +25,7 @@ const LinkPanelCloudinary = ({href, imgSrc, width, height, icon, upperText, lowe
             <Link href={href} className="relative group rounded-lg shadow-lg object-fit overflow-hidden col-start-2 col-span-1 ">
                 {imgSrc === "StaticImageDate" 
                     ? <CloudinaryImage publicId={imgSrc} width={width} height={height} alt="" className="duration-300 group-hover:opacity-80 group-hover:scale-110"/>
-                    : <CloudinaryImage publicId={imgSrc} width={width} height={height} alt="" className="duration-300  group-hover:opacity-80 group-hover:scale-110"/>}
+                    : <CloudinaryImage publicId={imgSrc} width={width} height={height} alt="" className="duration-300 group-hover:opacity-80 group-hover:scale-110"/>}
                 <div className="absolute bottom-0 left-0 right-0 p-2 px-4 text-white  bg-mainBrawn opacity-0
                                 group-hover:opacity-100 duration-300  bg-opacity-80">
                     <div className="flex items-center justify-between w-full">

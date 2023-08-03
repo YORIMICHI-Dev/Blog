@@ -1,22 +1,29 @@
 import Link from "next/link"
+import { IconDefinition, faCode, faGlobe, faTools } from "@fortawesome/free-solid-svg-icons";
 import CloudinaryImage from "@/components/molecules/CloudinaryImage"
-
+import LinkPanelCloudinary from "@/components/molecules/LinkPanelCloudinary"
 
 const contents = [
     {
-        imgSrc: "/blog/pages/home_profile_php4ui",
+        imgSrc: "/blog/pages/home_profile_gviclm",
         link: "/about/#profile",
-        buttonText: "Go to Profile",
+        icon: faTools,
+        upperText: "My Profile",
+        lowerText: "This page shows Yorimichi profile.",
     },
     {
-        imgSrc: "/blog/pages/home_skill_olw59o",
+        imgSrc: "/blog/pages/home_skill_cdbgj9",
         link: "/about/#skill",
-        buttonText: "Go to Skill",
+        icon: faTools,
+        upperText: "Go to Skill",
+        lowerText: "My skill stack, for example, Programming, Web and so on",
     },
     {
-        imgSrc: "/blog/pages/home_history_nmwhiz",
+        imgSrc: "/blog/pages/home_history_aiqio7",
         link: "/about/#history",
-        buttonText: "Go to History"
+        icon: faTools,
+        upperText: "Check History",
+        lowerText: "Belonged to University and Organization.",
     },
 ]
 
@@ -30,18 +37,20 @@ const IndexAbout = () => {
             
             {/* content */}
             <div className="mx-auto px-4 md:px-8">
-                <div className="grid grid-cols-1 gap-10 rounded-lg xl:grid-cols-3">
+                <div className="grid grid-cols-1 gap-4 rounded-lg md:grid-cols-3">
                     {contents.map((content, index) => {
                         return (
-                            <div key={index} className="flex flex-col items-center justify-center space-y-4 lg:space-y-8 mx-auto rounded-lg p-6 shadow-md">     
-                                <CloudinaryImage publicId={content.imgSrc} width={600} height={600} className="rounded-xl w-3/5 xl:w-auto" />
-                                <div className="flex flex-col items-center space-y-6">
-                                    <Link href={content.link} className="px-3 py-1 font-semibold duration-300 rounded-md shadow-ld border-2 border-secondaryGreen
-                                                                            text-lg bg-secondaryGreen hover:bg-white text-white hover:text-secondaryGreen">
-                                        {content.buttonText}
-                                    </Link>       
-                                </div>
-                            </div>                            
+                            <div key={index}>
+                                <LinkPanelCloudinary 
+                                    href={content.link}
+                                    imgSrc={content.imgSrc}
+                                    width={600}
+                                    height={400}
+                                    icon={content.icon}
+                                    upperText={content.upperText}
+                                    lowerText={content.lowerText}
+                                    />
+                            </div>                 
                         )
                     })}
                 </div>
